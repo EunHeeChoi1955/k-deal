@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+    url(/resources/lib/mobile/font/NotoSansKR-Light-Hestia.eot),
+    url(/resources/lib/mobile/font/NotoSansKR-Light-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(/resources/lib/mobile/font/NotoSansKR-Light-Hestia.woff) format('woff'),
+    url(/resources/lib/mobile/font/NotoSansKR-Light-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url(/resources/lib/mobile/font/NotoSansKR-Regular-Hestia.eot),
+    url(/resources/lib/mobile/font/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(/resources/lib/mobile/font/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    url(/resources/lib/mobile/fontNotoSansKR-Regular-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(/resources/lib/mobile/font/NotoSansKR-Medium-Hestia.eot),
+    url(/resources/lib/mobile/font/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(/resources/lib/mobile/font/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(/resources/lib/mobile/font/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url(/resources/lib/mobile/font/NotoSansKR-Bold-Hestia.eot),
+    url(/resources/lib/mobile/font/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(/resources/lib/mobile/font/NotoSansKR-Bold-Hestia.woff) format('woff'),
+    url(/resources/lib/mobile/font/NotoSansKR-Bold-Hestia.otf) format('opentype');
+}

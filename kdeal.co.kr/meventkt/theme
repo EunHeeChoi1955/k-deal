@@ -1,0 +1,3239 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>K-Deal 쇼핑</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta id="metaOgUrl"    property="og:url"           content="https://kdeal.co.kr">
+    <meta id="metaOgTitle"  property="og:title"         content="K-Deal 쇼핑">
+    <meta id="metaOgType"   property="og:type"          content="website">
+    <meta id="metaOgImg"    property="og:image"         content="https://kdeal.co.kr/m/resources/images/main/kt_bi_logo.png">
+    <meta id="metaOgDesc"   property="og:description"   content="KT 프리미엄 쇼핑혜택">
+    <meta id="metaDesc"  name="description" property="description" content="KT 프리미엄 쇼핑혜택">
+
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-57.png" sizes="57x57">
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-72.png" sizes="72x72">
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-96.png" sizes="96x96">
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-120.png" sizes="120x120">
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-144.png" sizes="144x144">
+    <link rel="icon" href="/resources/images/favicon/kt/favicon-152.png" sizes="152x152">
+
+
+    <link rel="stylesheet" href="/resources/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/picnique_pc_191024.css?version=20220119142111" media="screen and (min-width:801px)">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/mobile2_191024.css?version=20220119142111"  media="screen and (max-width:800px)">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/kt.css?version=20220119142111">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/kt_v1.css?version=20220119142111">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/skins/skin-black-light.css?v=20170731">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/animate.css">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/roboto.css">
+    <link rel="stylesheet" href="/resources/lib/mobile/css/swiper.min.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <[endif]-->
+
+    <script src="/resources/lib/plugins/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="/resources/lib/mobile/js/jquery.prettydropdowns.js"></script>
+    <script src="/resources/lib/mobile/js/mustache.min.js"></script>
+    <script src="/resources/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/resources/lib/mobile/js/sugar.js"></script>
+    <script src="/resources/lib/mobile/js/common.js?version=20220119142111"></script>
+    <script src="/resources/lib/mobile/js/swiper.min.js"></script>
+    <script src="https://nsp.pay.naver.com/sdk/js/naverpay.min.js"></script>
+    <script src="/resources/lib/plugins/requirejs/require.js"></script>
+    <script src="/resources/lib/mobile/js/charlimit.js"></script>
+
+    <script src="/resources/lib/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="/resources/lib/plugins/bxslider/jquery.bxslider_eve_slider.css">
+
+    <script src="/resources/lib/mobile/js/storage.js?version=20220119142111"></script>
+    <script src="/resources/lib/mobile/js/authentication.js?version=20220119142111"></script>
+    <script src="/resources/lib/mobile/js/paramManager.js?version=20220119142111"></script>
+    <script src="/resources/lib/mobile/js/mall.cart.js?version=20220119142111"></script>
+    <script src="/resources/lib/mobile/js/kt.js?version=20220119142111"></script>
+
+    <script>
+        var securityUser = "SecurityUser(frontUserId=818966, username=KDEAL, password=02ed7025518517a6779cf2543b1280eab4a762e7dc347549bea3a0867dd2971c, isEnabled=true, customerId=819429, customerName=KT, guid=ff4bdeb5-9305-4878-8877-88aaba617ecb, userRole=ROLE_CUSTOMER, isDormant=false, serviceType=ADNET_KT, rewardmallInfo=RewardmallInfo(jsonMapper=com.fasterxml.jackson.databind.ObjectMapper@4fa49776, id=56, name=KT, cid=KDEAL, key=ADNET_KT, url=https://kdeal.co.kr, dispEventId=953, type=null, serviceType=ADNET_KT, referrer=KT, title=K DEAL 쇼핑, logo=, metaImage=, description=KT 고객만 즐기는 프리미엄 혜택! K딜, favicon32=, favicon57=, favicon72=, favicon96=, favicon120=, favicon144=null, favicon152=null, defaultGooleTagManager=true, deliveryUrl=, hiddenParamKeys=null, usePostback=false, postbackParamKeys=null, postbackType=null, postbackUrl=, essentialPostbackParams={}, postbackEvents=null, postbackEventMap=null, processType=null, mainMoveType=null, rewardmallScriptList=[], rewardmallCssList=[], useCart=true, cartExpiredTime=0))";
+        if (securityUser == "") {
+            AlertUtil.open('세션이 종료되었습니다.', function() {
+                goRewardmallHome();
+            });
+        }
+    </script>
+
+    <!-- 나스미디어용 Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KHDJ767');</script>
+    <!-- End Google Tag Manager -->
+    <!-- 나스미디어용 Google Tag Manager 2 -->
+    <!--
+    <script>
+        (function (w, d, s, l, i, c) {
+            w["_b_g_e_b_f"] = w["_b_g_e_b_f"] ? w["_b_g_e_b_f"] : [];
+            w[l] = w[l] ? w[l] : {};
+            w[l].user = function (c, d) {
+                w["_b_g_e_b_f"].push({t: "user",a1: c,a2: d});
+            }
+            w[l].event = function (c, d, t) {
+                w["_b_g_e_b_f"].push({t: "event",a1: c,a2: d,a3: t ? t : new Date().getTime()});
+            }
+            w[l].track = function (c, d) {
+                w["_b_g_e_b_f"].push({t: "track",a1: c,a2: d});
+            }
+            function fEv() {
+                if (w["_b_g_e_b_f"] && w["_b_g_e_b_f"].length > 0) {
+                    for (var i = 0; i < w["_b_g_e_b_f"].length; i++) {
+                        var ev = w["_b_g_e_b_f"][i]
+                        w[l][ev["t"]](ev["a1"], ev["a2"], ev["a3"])
+                    }
+                }
+            }
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+            j.async = true;
+            j.src = 'https://sdk.bigin.io/v1/bigin.sdk.js';
+            var u = navigator.userAgent.toLowerCase(), h = {
+                projectID: i,
+                currencyCode: c
+            };
+            if ((u.indexOf('msie') !== -1) && parseInt(u.split('msie')[1]) < 9) {
+                var r = setInterval(function () {
+                    if (w[l] !== undefined) {
+                        clearInterval(r);
+                        w[l].config(h);
+                        fEv();
+                    }
+                }, 50);
+            } else {
+                j.onload = function () {
+                    w[l].config(h)
+                    fEv();
+                };
+            }
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'bigin', 'DTWO1I0UHL-4', 'KRW');
+    </script>
+    -->
+    <!-- End Google Tag Manager -->
+
+    <!-- 자사용 Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PD4J3JZ');</script>
+
+    <script>
+        // global.
+        var ref  = "KT";
+        var host = "https://kdeal.co.kr";
+        var securityUser = "SecurityUser(frontUserId=818966, username=KDEAL, password=02ed7025518517a6779cf2543b1280eab4a762e7dc347549bea3a0867dd2971c, isEnabled=true, customerId=819429, customerName=KT, guid=ff4bdeb5-9305-4878-8877-88aaba617ecb, userRole=ROLE_CUSTOMER, isDormant=false, serviceType=ADNET_KT, rewardmallInfo=RewardmallInfo(jsonMapper=com.fasterxml.jackson.databind.ObjectMapper@4fa49776, id=56, name=KT, cid=KDEAL, key=ADNET_KT, url=https://kdeal.co.kr, dispEventId=953, type=null, serviceType=ADNET_KT, referrer=KT, title=K DEAL 쇼핑, logo=, metaImage=, description=KT 고객만 즐기는 프리미엄 혜택! K딜, favicon32=, favicon57=, favicon72=, favicon96=, favicon120=, favicon144=null, favicon152=null, defaultGooleTagManager=true, deliveryUrl=, hiddenParamKeys=null, usePostback=false, postbackParamKeys=null, postbackType=null, postbackUrl=, essentialPostbackParams={}, postbackEvents=null, postbackEventMap=null, processType=null, mainMoveType=null, rewardmallScriptList=[], rewardmallCssList=[], useCart=true, cartExpiredTime=0))";
+
+        requirejs.config({
+            paths: {
+                jquery: "/resources/lib/plugins/jQuery/jquery-2.2.3.min",
+                swiper: "/resources/lib/mobile/js/swiper.min",
+                bxSlider: "/resources/lib/plugins/bxslider/jquery.bxslider.min",
+            },
+            shim: {
+                'swiper':{
+                    deps:["jquery"]
+                },
+                'bxSlider':{
+                    deps:["jquery"]
+                },
+            }
+        });
+
+        require(['jquery','swiper'], function (jquery,swiper){
+            var idx = $(".cm_hdnav_menu_padding").children(".active").index();
+            var menu_swiper = new swiper('.cm_hdnav_menu_grid', {
+                freeMode : true,
+                auto : false,
+                slidesPerView: 'auto',
+                initialSlide: idx,
+                loop: false,
+                grabCursor: true,
+            });
+        });
+
+
+        $(function() {
+
+            $('#__TOP_BTN__').click(function(){
+
+                window.scrollTo(0, 0);
+            });
+
+            $('#__EXPIRE_POINT_CONFIRM_BTN__').click(function(){
+                $('#__EXPIRE_POINT_POPUP__').hide();
+            });
+
+
+            var $sideBarCategoryArea = $(".sidebar-menu-area");
+            $(".sidebar-category-open").click(function() {
+                document.location.href='/m/category/main?referrer=KT';
+            });
+
+            $(window).scroll(function(){
+                window.scrollTop = $(this).scrollTop();
+                if (window.scrollTop > 100) {
+                    $('#__TOP_BTN__').show();
+
+                    // 구매하기 영역이 존재할 경우
+                    if ($('div.order-fixed-area')) {
+                    }
+                } else {
+                    $('#__TOP_BTN__').hide();
+                }
+
+            });
+
+            var curUrl = document.location.href;
+            if (curUrl.indexOf('product/details') <= 0) {
+                $('#__TOP_BTN__').css('padding-bottom', '7px');
+            }
+        });
+
+        var PopupUtil = {
+            'close' : function( __id__){
+                var msgPopup = $('div[name='+__id__+']');
+                if (msgPopup)  {
+                    $(msgPopup).remove();
+                }
+            },
+            'open': function(__id__, title, message, okCallback, cancelCallback){
+                var msgPopup = $('div[name='+__id__+']');
+
+                var scroll1 = parseInt(($(window).scrollTop()/2));
+
+                if (msgPopup)  {
+                    $(msgPopup).remove();
+                }
+
+                var tmplString = $('#'+__id__+'').html();
+                var viewString = Mustache.render(tmplString, {'title' : title , 'message' : message});
+                $(document.body).append(viewString);
+
+                $('div[name='+__id__+']').bind('touchmove',function(e){
+                    e.preventDefault();
+                });
+
+                var okCallbackFn = undefined;
+                var cancelCallbackFn = undefined;
+
+                if (okCallback == undefined) {
+                    okCallbackFn = function(){
+                        PopupUtil.close(__id__);
+                    }
+                } else {
+                    okCallbackFn = function(){
+                        PopupUtil.close(__id__);
+                        okCallback();
+                    }
+                }
+
+                if (cancelCallback == undefined ) {
+                    cancelCallbackFn = function(){
+                        PopupUtil.close(__id__);
+                    }
+                } else {
+                    cancelCallbackFn = function(){
+                        PopupUtil.close(__id__);
+                        cancelCallback();
+
+                    }
+                }
+                $('div[name='+__id__+']').css('top',window.scrollTop);
+                $('div[name='+__id__+']').find('[name=__OK_BTN__]').click(okCallbackFn);
+                $('div[name='+__id__+']').find('[name=__CANCEL_BTN__]').click(cancelCallbackFn);
+            }
+        };
+
+        var AlertUtil = {
+            'open' : function(message, okCallback){
+                PopupUtil.open('__MSG_ALERT__', '안내', message, okCallback, undefined);
+            },
+            'close' : function(){
+                PopupUtil.close('__MSG_ALERT__');
+            }
+        };
+        var ConfirmUtil = {
+            'open' : function(message, okCallback, cancelCallback){
+                PopupUtil.open('__MSG_POPUP__', '안내', message, okCallback, cancelCallback, undefined);
+            },
+            'close' : function(){
+                PopupUtil.close('__MSG_POPUP__');
+            }
+        };
+        var CouponAlertUtil = {
+            'open' : function(title, message, okCallback, cancelCallback){
+                PopupUtil.open('__MSG_COUPON_ALERT__', title, message, okCallback, cancelCallback, undefined);
+            },
+            'close' : function(){
+                PopupUtil.close('__MSG_COUPON_ALERT__');
+            }
+        };
+
+        var filter = "win16|win32|win64|mac|macintel";
+        var windowHeight = window.innerHeight;
+        $(window).scroll(function() {
+            if (navigator.platform) {
+                if (filter.indexOf(navigator.platform.toLowerCase()) > 0) {
+                    var scroll1 = parseInt(($(this).scrollTop()/2));
+                    var scroll3 = parseInt(($(this).scrollTop()+windowHeight)/2 - 50);
+                    $('.top_btn_fixed').css({
+                        'top': scroll3 + 'px'
+                    })
+                    var scroll5 = parseInt(($(this).scrollTop()+$(window).height() - ($(window).height()/2))/2);
+                    $('.progress_bar').css({
+                        'top': scroll5 + 'px'
+                    })
+                }
+            }
+        });
+
+    </script>
+</head>
+<body class="skin-black-light sidebar-mini">
+<div class="pc_wrap">
+
+<!--나스미디어용 Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHDJ767"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- 자사용  Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD4J3JZ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script id="__MSG_POPUP__" type="text/mustache-tmpl" >
+<div name="__MSG_POPUP__" class="alert_msg">
+    <div class="popup_wrap" style="display:table; position:absolute; width:100%; height:100%;">
+        <div style="margin:50% auto;width:70%;height:163px;background:#fff;border-radius:3px;padding:21px;">
+            <div style="float:left; width:100%; text-align:center; font-size:15px;">{{title}}</div>
+            <div style="float:left; width:100%; text-align:center; padding-top:15px; font-size:12px; height:24px; color:#000;">{{{message}}}</div>
+            <div style="float:left; width:100%; text-align:center; margin-top:40px; font-size:12px;">
+                <div style="width:212px; margin:auto;">
+                    <div name="__CANCEL_BTN__" style="float:left; width:100px; height:40px; background:#fff; border:1px solid #dbdbdb;  border-radius:3px; font-size:14px; display:table;">
+                        <span style="display:table-cell; vertical-align:middle;">아니요</span>
+                    </div>
+                    <div name="__OK_BTN__" style="float:left; width:100px; height:40px; background:#845af6; color:#FFF; border:1px solid #845af6; border-radius:3px; font-size:14px; display:table; margin-left:10px;">
+                        <span style="display:table-cell; vertical-align:middle;">예</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="__MSG_COUPON_ALERT__" type="text/mustache-tmpl" >
+<div name="__MSG_COUPON_ALERT__" class="alert_msg">
+    <div class="popup_wrap" style="display:table; position:absolute; width:100%; height:100%;">
+        <div style="margin:50% auto;width:70%;height:163px;background:#fff;border-radius:3px;padding:21px;">
+            <div style="float:left; width:100%; text-align:center; font-size:15px;">{{title}}</div>
+            <div style="float:left; width:100%; text-align:center; padding-top:15px; font-size:12px; height:24px; color:#000;">{{{message}}}</div>
+            <div style="float:left; width:100%; text-align:center; margin-top:40px; font-size:12px;">
+                <div style="width:212px; margin:auto;">
+                    <div name="__CANCEL_BTN__" style="float:left; width:100px; height:40px; background:#fff; border:1px solid #dbdbdb;  border-radius:3px; font-size:14px; display:table;">
+                        <span style="display:table-cell; vertical-align:middle;">홈이동</span>
+                    </div>
+                    <div name="__OK_BTN__" style="float:left; width:100px; height:40px; background:#1BAEC5; color:#FFF; border:1px solid #1BAEC5; border-radius:3px; font-size:14px; display:table; margin-left:10px;">
+                        <span style="display:table-cell; vertical-align:middle;">쿠폰함 보기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+
+<!-- WIDERPLANET  SCRIPT START 2018.11.27 -->
+<!-- // WIDERPLANET  SCRIPT END 2018.11.27 -->
+
+<script id="__MSG_ALERT__"  type="text/mustache-tmpl" >
+<div name="__MSG_ALERT__" class="alert_msg">
+     <div class="popup_wrap" style="display:table; position:fixed; width:100%; height:100%; left: 0; top:0;">
+        <div  style="margin: 0 auto;width: 70%; height: 163px; background: #fff; border-radius: 3px; padding: 21px; display: table; top: 50%; position: absolute; left: 50%; transform: translate(-50%,-50%); max-width: 380px">
+            <div style="float:left;  display:table; width:100%; text-align:center; font-size:15px;">{{title}}</div>
+            <div style="float:left;  display:table; width:100%; text-align:center; padding-top:15px; font-size:12px; height:24px; color:#000; letter-spacing:-1px;">{{{message}}}</div>
+            <div style="float:left; display:table; width:100%; text-align:center; height:40px; font-size:12px;">
+                <div style="width:100px; margin:auto;">
+                    <div name="__OK_BTN__" style="float:left; width:100px; height:40px; background:#1BAEC5; color:#FFF; margin-top:20px; border:1px solid #1BAEC5; border-radius:3px; font-size:14px; display:table; ">
+                        <span style="display:table-cell; vertical-align:middle;" >확인</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+<!-- 소멸예정적립금 안내 팝업----------------------------------------------------------------------------->
+<div id="__EXPIRE_POINT_POPUP__" style="position:fixed; width:100%; text-align:center; height:100%; top:0px; z-index:999999; background:rgba(0,0,0,0.6); display:none; left:0;">
+    <div style="margin:50% auto;  width:70%; height:210px; background:#fff; border-radius:3px; padding:21px;">
+        <div style="float:left; width:100%; text-align:center; font-size:15px;">소멸예정적립금이란?</div>
+        <div style="float:left; width:100%; text-align:center; padding-top:15px; font-size:12px; height:24px; color:#000;">유효기간의 경과로 소멸이 예상되는 적립금입니다. 픽앤유니크 적립금 사용 시 남은 유효기간이 짧은 순서로 차감되므로, 적립금 소멸은 최대한 방지할 수 있습니다.</div>
+        <div style="float:left; width:100%; text-align:center; margin-top:80px; font-size:12px;">
+            <div style="width:100px; margin:auto;">
+                <div style="float:left; width:100px; height:40px; background:#1BAEC5; color:#FFF; border:1px solid #1BAEC5; border-radius:3px; font-size:14px; display:table;"><span id="__EXPIRE_POINT_CONFIRM_BTN__" style="display:table-cell; vertical-align:middle;">확인</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--적립금 적립/사용 안내 팝업---------------------------------------------------------------------------->
+<div id="__POINT_ALERT_POPUP__" class="overlay popup_position" style="display:none; margin: 0px auto; position:fixed; width:100%; text-align:center; height:100%; top:0px; z-index:999999; background:rgba(0,0,0,0.6);">
+    <!--.overlay {background: rgba(0,0,0,0.6);bottom: 0; left: 0;/*filter: alpha(opacity = 50); /* IE7 & 8 */position: fixed ;right: 0;top: 0; z-index: 999999;}-->
+    <div style="border-radius:5px;padding:17px;background:#fff;float:left; position:absolute; top:50%; margin-top: -216px; width:calc(100% - 100px); left:50%; transform:translateX(-50%);">
+        <div style="float:left; width:100%; text-align:center; font-size:15px; font-weight:700;">적립금 적립 / 사용 안내</div>
+        <ul style="position:relative; top:20px; text-align:left; left:5px; list-style-type: circle !important;; width:98%;">
+            <li style="display:inline-block;font-size:11px; text-indent: -10px; word-break:keep-all;">- 적립금은 상품구매확정 후, 최종결제금액의 1%를 적립해드립니다. 또한, 기타 이벤트 참여 등을 통해서도 적립받으실 수 있습니다.</li>
+            <!--<li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px;"> 또한, 기타 이벤트 참여 등을 통해서도 적립받으실 수 있습니다.</li>-->
+            <li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px; word-break:keep-all;">- 적립금은 상품 주문 시, 보조 결제 수단으로 사용되며 현금/카드/쿠폰 등과 함께 이용 가능합니다.</li>
+            <li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px; word-break:keep-all;">- 적립금은 최종결제금액에 의해 정해지며  해당 주문의 취소/환불 시 적립된 금액은 반환됩니다.</li>
+            <li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px; word-break:keep-all;">- 적립금 사용 후, 주문 취소/환불 시 적립금은 복원됩니다.</li>
+            <li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px; word-break:keep-all;">- 전자금융거래법 등 관계 법령에 따라 적용 중인 적립금 통합 한도는 200만원으로 제한합니다.</li>
+            <li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px; word-break:keep-all;">- 적립금은 최소 1,000P 이상 보유 시 현금처럼 사용 가능합니다. 또한, 1회 사용 시 최소 10p 이상, 단위에 상관없이 사용 가능합니다.</li>
+            <!--<li style="display:inline-block;font-size:11px; text-indent: -10px; margin-top:10px;"> 또한, 1회 사용 시 최소 10p 이상, 단위에 상관없이 사용 가능합니다.</li>-->
+            <div style="float:left; width:100%; text-align:center; margin-top:30px; margin-bottom:20px; font-size:12px;">
+                <div style="width:100px; margin:auto;">
+                    <div style="float:left; width:100px; height:40px; background:#1BAEC5; color:#FFF; border:1px solid #1BAEC5; border-radius:3px; font-size:14px; display:table;" onclick="$('#__POINT_ALERT_POPUP__').hide();"><span style="display:table-cell; vertical-align:middle;">확인</span></div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Left side column. contains the logo and sidebar -->
+
+<!-- Hide on app Start -->
+    <header>
+        <h2 class="sub-logo"><img src="/resources/images/rewardmall/kt/kt.png" alt="logo" title="logo" /></h2>
+        <h1 class="logo go-main-home"><img src="/resources/images/rewardmall/kt/v1/logo.png" alt="logo" title="logo" /></h1>
+        <ul class="gnb">
+            <li onclick="location.href='/m/search/kt/main?cid=KDEAL'">
+                <img src="/resources/images/rewardmall/kt/v1/search.png" alt="search" title="search" style="height:18px;"/>
+            </li>
+            <li class="go-main-home">
+                <img src="/resources/images/rewardmall/kt/v1/home.png" alt="home" title="home" />
+            </li>
+            <li onclick="location.href='/m/cart/kt/list'">
+                <img src="/resources/images/rewardmall/kt/v1/beg.png" alt="beg" title="beg" />
+            </li>
+        </ul>
+    </header>
+    <div class="main_nav">
+        <nav class="swiper-container">
+            <ul class="swiper-wrapper">
+                        <li class=" swiper-slide"><a href="/m/event/kt/theme?referrer=KT&id=953&cid=KDEAL">홈</a></li>
+                        <li class=" swiper-slide"><a href="/m/event/kt/theme?referrer=KT&id=1293&cid=KDEAL">한정특가</a></li>
+                        <li class=" swiper-slide"><a href="/m/event/kt/theme?referrer=KT&id=1386&cid=KDEAL">설맞이</a></li>
+                        <li class="on swiper-slide"><a href="/m/event/kt/theme?referrer=KT&id=1233&cid=KDEAL">K마트</a></li>
+                        <li class=" swiper-slide"><a href="/m/event/kt/theme?referrer=KT&id=1102&cid=KDEAL">기획전</a></li>
+                        <li class=" swiper-slide"><a href="/m/event/kt/theme?referrer=KT&id=1208&cid=KDEAL">이벤트</a></li>
+            </ul>
+        </nav>
+    </div>
+<!-- Progress bar -->
+
+<!-- 매일받기 이벤트 팝업 -->
+<div id="daily-event-join-request-popup" class="event_modal_wrapper" style="display: none;" data-start="20211213090000" data-end="20211226235959">
+    <div class="event_modal">
+        <div class="close"></div>
+        <img src="/resources/images/rewardmall/kt/event_popup/popup.png">
+        <div class="big_button go-event"><img src="/resources/images/rewardmall/kt/event_popup/popup_big_button.png"></div>
+        <div class="small_button not-open-today"><img src="/resources/images/rewardmall/kt/event_popup/popup_small_button.png"></div>
+    </div>
+</div>
+<!-- // 매일받기 이벤트 팝업 -->
+
+<div id="fb-root"></div>
+<script>
+    var html = '';
+
+    //상단 팝업 닫기 --ss
+    $('.top_banner_close').click(function(){
+        $('.top_banner').fadeOut();
+    });
+    //상단 팝업 닫기 --ee
+
+    //고정 팝업 닫기 --ss
+    $('.main_fix_close').click(function(){
+        setCookie2("appDownload", 1, 1);
+        $('.main_fix_popup').fadeOut();
+    });
+
+    $('.cm_hdnav_menu_nav_button').on('click',function(){
+        $(this).toggleClass("on");
+        if($(this).hasClass('on')){
+            $('.cm_hdnav_menu_nav').stop().fadeIn();
+        }else{
+            $('.cm_hdnav_menu_nav').stop().fadeOut();
+        }
+    });
+
+    // 매일받기 12월 이벤트 팝업 처리 공통.
+    var DailyEventPopup = (function() {
+        var $dailyEventPopup = $('#daily-event-join-request-popup');
+        $dailyEventPopup.find('.close').on('click', function() {
+            $dailyEventPopup.hide();
+            return false;
+        });
+
+        $dailyEventPopup.find('.go-event').on('click', function() {
+            location.href = '/m/event/kt/theme?cid=KDEAL&id=1320';
+            return false;
+        });
+
+        $dailyEventPopup.find('.not-open-today').on('click', function() {
+            $('.event_modal_wrapper').hide();
+            setCookie2('dayJoin12EventPopupCloseDate', 'Y', 1);
+            return false;
+        });
+
+        var _isEventDay = function() {
+            var start = NumberTool.parseInt($dailyEventPopup.data('start')),
+                end = NumberTool.parseInt($dailyEventPopup.data('end')),
+                today = NumberTool.parseInt((new Date()).dateFormat('yyyyMMddHHmmss'));
+
+            return today >= start && today <= end;
+        };
+
+        var _isJoin = function() {
+            return getCookie2('dayJoin12EventJoin') === 'Y';
+        };
+
+        var _isStartable = function() {
+            var dayJoin12EventPopupCloseDate = getCookie2('dayJoin12EventPopupCloseDate');
+            return (dayJoin12EventPopupCloseDate !== 'Y') && _isEventDay() && !_isJoin()
+        };
+
+        return {
+            isStartable : _isStartable,
+            start : function() {
+                if (_isStartable()) {
+                    $('.event_modal_wrapper').show();
+                }
+            }
+        };
+
+    })();
+
+    function goRewardmallHome() {
+            location.href = location.origin + '/m/event/kt/theme?cid=KDEAL&id=953';
+    }
+
+    function goDeliverySearch() {
+        KDeal.isCertified({
+            success: '/m/mypage/nonuser/kt/mypage'
+        }, function() {
+            location.href = '/m/mypage/nonuser/kt/mypage';
+        });
+    }
+
+    function goProductDetail(prodId) {
+        location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(prodId);
+    }
+
+    function goQnaSearch() {
+        KDeal.isCertified({
+            success: '/m/mypage/cs/rewardmall/kt-qna'
+        }, function() {
+            location.href = '/m/mypage/cs/rewardmall/kt-qna';
+        });
+    }
+
+    $(document).ready(function() {
+        $('#go-main-home, .go-main-home').on('click', function() {
+            goRewardmallHome();
+            return false;
+        });
+
+        $('#go-delivery-search').on('click', function() {
+            goDeliverySearch();
+            return false;
+        });
+
+        $('#go-qna-search').on('click', function() {
+            goQnaSearch();
+            return false;
+        });
+
+        $('img[data-prod-id]').click(function(){
+            var prodId = $(this).data('prod-id');
+            goProductDetail(prodId);
+        });
+
+        // 파라미터 초기화.
+        KDeal.init();
+
+    });
+</script>
+<script type="text/javascript">
+    var rid = KDeal.get('rid');
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'userId' : rid,
+    });
+
+
+       var idx = $(".main_nav nav ul").children(".on").index();
+       var menu_swiper = new Swiper('.main_nav .swiper-container', {
+           freeMode : true,
+           auto : false,
+           slidesPerView: 'auto',
+           initialSlide: idx,
+           loop: false,
+           grabCursor: true,
+       });
+
+ </script>
+<!-- Main content -->
+<section class="content" style="padding-bottom: 0">
+    <div class="callout callout-info message-area">
+        <span class="alert-message"></span>
+    </div>
+
+    <style>
+        .content {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .event {
+            margin-bottom: 5px;
+            max-width: 100%;
+        }
+
+        .event-img {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        .eventItem-list {
+            width:100%;
+        }
+
+        .eventItem-list-ul {
+            box-sizing : border-box;
+            padding: 0 10px 0 10px;
+            display:table;
+            list-style-type: none;
+            width:100%
+        }
+
+        .eventItem-list-li {
+            float: left;
+            margin: 0 0 10px 0;
+            width: 49%;
+            background-color: #ffffff;
+        }
+
+        .eventItem-list-li-middle {
+            float: left;
+            width: 2%;
+        }
+
+        .eventItem-list-li-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .eventItem-list-title{padding:24px 16px; background:#fff; font-size: 20px; font-weight:800; position:relative;}
+        .eventItem-list-title img{width:100%;}
+        .eventItem-list-title .arrow{width:32px; height:32px; position:absolute; right:12px; top:21px;}
+        .eventItem-list-title .arrow img{width:100%; float:left;}
+        /*.eventItem-list-title .arrow::after{content: " "; display:block; width:18px; height: 1px; background:#454f5c; top:55%; position:absolute; }
+        .eventItem-list-title .arrow::before{content: " "; position:absolute; display:block; width:9px; height: 9px; border-top:1px solid #454f5c; border-right:1px solid #454f5c; transform: rotate(45deg); margin-top:-4px; top:55%; right: 1px;}*/
+
+        .eventItem-list-li-desc1 {float: left; margin:10px 10px 1px 10px;  height: 33px; text-align: left; font-size: 12px; color: #000000;word-break;break-all;}
+        .eventItem-list-li-desc-left{float:left; width:70%; margin-top:10px;}
+        .eventItem-list-li-desc-h1a{float:left; margin:0px 2px 0px 10px; text-align:left;  font-size:11px; color:#43c2d7;}
+        .eventItem-list-li-desc-h1b{float:left; text-align:left; padding-left:5px; font-size:11px; color:#8e8e8e;}
+        .eventItem-list-li-desc-h2{float: left; text-align:left;  width:100%; margin: 0px 2px 10px 10px; font-size: 13px; color: #000; clear:both;    }
+
+        .eventItem-list-li-desc-right{float:right; width:30%; padding-right:10px; margin-top:10px;}
+        .eventItem-list-li-desc-free{width:100%; padding:0px 2px; background:#43c2d7; font-size:9px; text-align:center; color:#fff; margin:20px 5px 0px 0px; letter-spacing:-0.5px;}
+
+        .eventItem-list-type-1 {margin-bottom:0; border-bottom:0; border:0;}
+        .eventItem-list-type-1 .eventItem-list-text-title{white-space:nowrap; -webkit-line-clamp: 1; height: auto; font-size: 18px;}
+        .eventItem-list-type-1 .eventItem-list-text {height: 120px}
+        .eventItem-list-type-1 .eventItem-list-price{font-weight:800; margin-top:5px; letter-spacing: -1.5px;}
+        .eventItem-list-type-1 .eventItem-list-badge{position:absolute; left: 18px; bottom: 12px;}
+        .eventItem-list-type-1 .eventItem-list-price-pri{margin-left:5px;}
+        .eventItem-list-type-1 .eventItem-list-price-num span{position:relative; top:-1px}
+
+        .eventItem-list-type-2{display:flex; border:0;}
+        .eventItem-list-type-2 .eventItem-list-text-title{-webkit-line-clamp: 1; white-space:nowrap; height: auto; display:block; font-size: 16px; }
+        .eventItem-list-type-2 .eventItem-list-price{margin-top: 10px; letter-spacing: -1.5px}
+        .eventItem-list-type-2 .eventItem-list-price-sale{font-weight: 800;}
+        .eventItem-list-type-2 .eventItem-list-price-num{font-weight: 800;}
+        .eventItem-list-type-2 .eventItem-list-price-num span{position:relative; top: -1px;}
+        .eventItem-list-type-2 .eventItem-list-text{padding: 35px 18px;}
+
+        .eventItem-list-type-3 .eventItem-list-badge{position:absolute; left: 18px; bottom: 12px;}
+        .eventItem-list-type-3 .eventItem-list-img{padding:5px;}
+        .eventItem-list-type-3 .eventItem-list-text-title{font-size: 14px;}
+        .eventItem-list-type-3 .eventItem-list-price{margin-top: 4px;font-weight: 800;letter-spacing: -1.5px;}
+        .eventItem-list-type-2 .eventItem-list-price-pri, .eventItem-list-type-3 .eventItem-list-price-pri {display: block !important;}
+        .eventItem-list-type-3 {display: table;width: 100%;margin-bottom:0px;}
+        .eventItem-list-type-3 .eventItem-list-text {height: 140px;padding: 12px 18px;}
+        .eventItem-list-type-3 > li{border:0;}
+        .eventItem-list-type-3 > li:nth-child(even){border-left:0;}
+        .eventItem-list-type-3 > li:nth-child(n + 3){border-top:0;}
+        .eventItem-list-type-3 .eventItem-list-price-num span{position:relative;top: -1px;}
+    </style>
+
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        div.event {
+            padding: 0;
+            margin: 0;
+            float: left;
+            display: table;
+            width: 100%;
+        }
+
+
+        .eventItem-list-type-2 .eventItem-list-badge {
+            margin-top: 12px
+        }
+
+        .eventItem-list-type-2{
+            margin-bottom: 0;
+            border-bottom: 0px;
+        }
+
+        .evnet-calc4 {
+            display: table
+        }
+
+        section.content {
+            display: block !important;
+            background: #fff;
+        }
+
+        .kt-slide-top .swiper-slide {
+            display: flex
+        }
+
+        .kt-slide-top img {
+            width: 100%;
+        }
+
+        .kt-slide-top .swiper-pagination-bullet {
+            background: #ffffff;
+        }
+
+        .kt-slide-top .swiper-pagination-bullet-active {
+            width: 30px;
+            border-radius: 3px;
+        }
+
+        .kt-slide-line img {
+            width: 100%;
+        }
+
+        .kt-slide-line .swiper-pagination-fraction {
+            display: inline-block;
+            width: auto;
+            background-color: rgba(0, 0, 0, .5);
+            padding: 5px 12px 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .kt-slide-line .swiper-container-horizontal>.swiper-pagination-bullets,
+        .kt-slide-line .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            left: auto;
+            right: 15px;
+            bottom: 15px;
+        }
+
+        .kt-slide-line span {
+            font-weight: bold;
+        }
+
+        .kt-slide-line .swiper-pagination-total {
+            opacity: .8;
+        }
+
+
+        .eventItem-list-badge .badge {
+            font-size: 10px;
+            padding: 1px 5px;
+            display: inline-block;
+            background: #fff;
+            border-radius: 0;
+        }
+
+        .eventItem-list-badge .badge.blue {
+            border: 1px solid #5095ff;
+            color: #5095ff;
+        }
+
+        .eventItem-list-badge .badge.red {
+            border: 1px solid #fe0000;
+            color: #fe0000;
+        }
+
+        .product-list.time {
+            margin-top: 20px;
+        }
+
+        .kt-theme .badge {
+            font-size: 11px;
+            padding: 4px 6px;
+            font-weight:bold;
+            display: inline-block;
+            background: #fff;
+            border-radius: 0;
+        }
+
+        .kt-theme .badge_box{
+            margin-top: 7px;
+        }
+
+        .kt-theme .badge.blue {
+            border: 1px solid #5095ff;
+            color: #5095ff;
+        }
+
+        .kt-theme .badge.red {
+            border: 1px solid #fe0000;
+            color: #fe0000;
+        }
+
+
+        .product-list.time li {
+            width: calc(50% - 5px);
+            float: left;
+            margin-left: 10px
+        }
+
+        .product-list.time li:first-child {
+            margin-left: 0;
+        }
+
+        .product-list.time li img {
+            width: 100%;
+        }
+
+        .product-list.time li .title {
+            margin-top: 8px;
+            color:#4c4c4c; font-size: 12px; line-height: 1.2; height: 28px; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box;
+        }
+
+        .product-list.time li .price {
+            color: #000;
+            margin-top: 4px;
+            font-size: 15px;
+        }
+
+        .product-list.time li .sale_price {
+            font-weight: bold;
+            font-size: 14px
+        }
+
+        .product-list.time li .ori_price {
+            font-size: 12px;
+            color: #cccccc;
+            text-decoration: line-through
+        }
+
+        .product-list.time li .percent {
+            color: #fe0000;
+            font-size: 14px
+        }
+
+        .product-list.time li .badge_box {
+            margin-top: 8px;
+        }
+
+        .product-list.time li .badge_box div:nth-child(1){
+            margin-left:0;
+        }
+
+        .product-list.time li .badge_box div{
+            margin-left:4px;
+        }
+
+        .kt-theme .title img{width: 100%;}
+        .kt-theme-1 .title img{ width: 100%;}
+
+        .kt-theme-1-list{padding : 0 20px 50px 20px;}
+        .kt-theme-1-list li:first-child{margin-top:0px;}
+        .kt-theme-1-list li {background: #fff; margin-top: 15px;}
+        .kt-theme-1-list li img{width: 130px; height: 130px; display: inline-block; vertical-align: middle;}
+        .kt-theme-1-list li .text{width: calc(100% - 140px);  display: inline-block; vertical-align: middle; padding-left: 8px; box-sizing: border-box; padding-right:10px; padding-top: 8px;}
+        .kt-theme-1-list li .text .title{color:#4c4c4c; font-size: 16px; line-height: 1.2; text-overflow: ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box; height: 37px; overflow: hidden;}
+        .kt-theme-1-list li .text .price{font-weight: bold; margin-top: 5px; letter-spacing: -1px;}
+        .kt-theme-1-list li .text .price span{font-size: 11px; color:#000; font-weight: normal;}
+        .kt-theme-1-list li .text .price .sale{font-size: 24px; font-weight: 800; color:#ee0b00; float: left; margin-top: 19px; margin-right: 6px;}
+        .kt-theme-1-list li .text .price .num{ vertical-align: bottom; float: left; font-size: 18px; font-weight: 800; }
+        .kt-theme-1-list li .text .price .num>span{font-size: 12px; position:relative; top: -1px; font-weight: 800;}
+        .kt-theme-1-list li .text .price .ori_price{ font-size: 12px; text-decoration: line-through; font-weight: normal !important; position: relative; bottom: -7px; opacity: .8; top: auto !important; color:#b4b4b4; }
+        .kt-theme-1-list li .text .price .sale span{font-size: 24px; color:#ee0b00; font-weight: bold;}
+        .kt-theme-1-list li .text .price > span{font-size: 12px;  font-weight: normal;}
+
+
+        .kt-theme-3-list{padding : 0 20px 50px 20px;}
+        .kt-theme-3-list li:first-child{margin-top:0px;}
+        .kt-theme-3-list li {background: #fff; margin-top: 15px;}
+        .kt-theme-3-list li img{width: 130px; height: 130px; display: inline-block; vertical-align: middle;}
+        .kt-theme-3-list li .text{width: calc(100% - 140px);  display: inline-block; vertical-align: middle; padding-left: 12px; box-sizing: border-box; margin-right:4px; position: relative;}
+        .kt-theme-3-list li .text .title{color:#4c4c4c; font-size: 15px; line-height: 1.2; text-overflow: ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box; height: 35px; overflow: hidden;}
+        .kt-theme-3-list li .text .price{font-weight: bold; margin-top:8px;}
+        .kt-theme-3-list li .text .price .sale{font-size: 24px; font-weight: bold; color:#ee0b00; float: left; margin-top: 17px;}
+        .kt-theme-3-list li .text .price .num{ vertical-align: bottom; float: left; font-size: 18px; font-weight: bold; margin-left:8px}
+        .kt-theme-3-list li .text .price .num>span{font-size: 12px;}
+        .kt-theme-3-list li .text .price .ori_price{ font-size: 12px; text-decoration: line-through; font-weight: normal; position: relative; bottom: -7px; opacity: .8;}
+        .kt-theme-3-list li .text .price .sale span{font-size: 18px;}
+        .kt-theme-3-list li .text .price > span{font-size: 12px; color:#555; font-weight: normal;}
+
+        .kt-theme-2{overflow:hidden;}
+        .kt-theme-2-list-padding{padding:0 20px 20px 20px;}
+        .kt-theme-2-list-box{width: calc(100% + 20px); overflow-x: auto;}
+        .kt-theme-2-list{display:inline-block; padding-right: 20px;}
+        .kt-theme-2-list li:first-child{margin-left:0;}
+        .kt-theme-2-list li {background: #fff; width: 144px; float: left; margin-left: 10px}
+        .kt-theme-2-list li .img{width:100%;}
+        .kt-theme-2-list li .img:after {content: "";display: block;padding-bottom: 100%;}
+        .kt-theme-2-list li .text{display: inline-block; vertical-align: middle; padding:12px 8px 12px 8px; box-sizing: border-box; height: 119px;}
+        .kt-theme-2-list li .text .title{color:#4c4c4c; font-size: 16px; line-height: 1.2; height: 38px; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; display:-webkit-box;}
+        .kt-theme-2-list li .text .price{font-weight: 800; margin-top: 4px; font-size: 18px;}
+        .kt-theme-2-list li .text .price span{font-size: 14px; color:#000; font-weight: 800; position:relative; top: -1px;}
+
+        .themeTagBox{
+            height: 318px
+        }
+
+        .themeTagBox > div{
+            padding: 150px 40px 40px 40px;
+        }
+
+        .themeTagBox > div a{
+            width: calc(100%/4 - 5px);
+            float:left;
+            text-align: center;
+            margin-right: 6px;
+            margin-bottom: 5px;
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .themeTagBox > div a:nth-child(4n + 0){
+            margin-right:0;
+        }
+
+        @media screen and (max-width: 780px) {
+            .themeTagBox{
+                height: 66vw;
+            }
+
+            .themeTagBox > div{
+                padding: 32vw 7vw 10vw 7vw;
+            }
+
+            .themeTagBox > div a{
+                width: calc(100%/4 - 1vw);
+                float:left;
+                text-align: center;
+                margin-right: 1vw;
+                margin-bottom: 1.2vw;
+                border: 1px solid #fff;
+                color: #fff;
+                border-radius: 10vw;
+                padding: 1.5vw;
+                font-size: 2.5vw
+            }
+
+            .themeTagBox > div a:nth-child(4n + 0){
+                margin-right:0;
+            }
+        }
+    </style>
+    <script>
+        function random_index(className) {
+            var index = Math.floor(Math.random()*($(className).children('div').children('div').children('.swiper-slide').length));
+            return index;
+        }
+    </script>
+
+        <section class="content" style="padding-bottom: 0; display: block; min-height: auto;"><!--프로모션 이벤트 출력//s--------------------------------->
+<style>
+		div.event {
+			padding: 0;
+			margin: 0;
+			display: table;
+			width: 100%;
+		}
+		
+		.eventItem-list-type-2 .eventItem-list-price-pri,
+		.eventItem-list-type-3 .eventItem-list-price-pri {
+			display: block !important;
+		}
+		
+		.eventItem-list-type-3 {
+			display: table;
+			width: 100%;
+		}
+		
+		.eventItem-list-type-3 .eventItem-list-text {
+			padding: 12px 18px;
+		}
+		
+		.eventItem-list-type-2 .eventItem-list-badge {
+			margin-top: 12px;
+		}
+		
+		.evnet-calc4 {
+			display: table;
+		}
+		
+		section.content {
+			display: block !important;
+		}
+		
+		.evnet-calc3>div {
+			width: calc(100% / 3);
+			float: left;
+			display: table;
+		}
+		
+		.evnet-calc4>div {
+			width: calc(100% / 4);
+			float: left;
+		}
+		
+		.evnet-calc2 {
+			display: table;
+			width: 100%;
+		}
+		
+		.evnet-calc2 div {
+			width: calc(100% / 2);
+			float: left;
+			display: table;
+		}
+		
+		.evnet-calc2 div img {
+			width: 100%;
+		}
+		
+		div.soldout {
+			display: none;
+		}
+		
+		div.hdn {
+			display: none;
+		}
+		
+		.mt_5 {
+			margin-top: -5px !important;
+		}
+		
+		div.event img {
+			float: left;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+		
+		section.content {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.evnet-calc4>div img,
+		.evnet-calc4>div a {
+			width: 100%;
+		}
+		
+		p.cssp {
+			margin: 0 !important;
+			height: 0px !important;
+		}
+		
+		.eventItem-list-type-3 .eventItem-list-text {
+			height: 144.5px;
+		}
+		
+		.eventItem-list-type-2 .eventItem-list-price-pri,
+		.eventItem-list-type-3 .eventItem-list-price-pri {
+			display: block !important;
+		}
+		
+		.eventItem-list-type-3 {
+			display: table;
+			width: 100%;
+		}
+		
+		.eventItem-list-type-3 .eventItem-list-text {
+			padding: 12px 18px;
+		}
+		
+		.eventItem-list-type-2 .eventItem-list-badge {
+			margin-top: 12px;
+		}
+		
+		.evnet-calc3>div {
+			width: calc(100% / 3);
+			float: left;
+			display: table;
+		}
+		
+		.evnet-calc2>div {
+			width: calc(100% / 2) !important;
+			float: left;
+			display: table;
+		}
+		
+		div.soldout {
+			display: none;
+		}
+		
+		div.hdn {
+			display: none;
+		}
+		
+		.mt_5 {
+			margin-top: -5px !important;
+		}
+		
+		div.event img {
+			float: left;
+			margin: 0;
+			padding: 0;
+		}
+		
+		section.content {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		.img_container {
+			position: relative;
+		}
+		
+		.img_container img {
+			width: 100%;
+		}
+		
+		p.cssp {
+			margin: 0 !important;
+			height: 0px !important;
+		}
+		
+		.event a {
+			float: left;
+		}
+		
+		.time1 {
+			position: absolute;
+			font-size: 19px;
+			color: #000;
+			top: 78.5%;
+			left: 20%;
+			display: inline-block;
+			letter-spacing: -2px;
+		}
+		
+		.time1 span {
+			font-weight: bold;
+		}
+		
+		.img_container .badge1 {
+			width: 75px;
+			height: 75px;
+			position: absolute;
+			z-index: 99;
+			top: 20px;
+			left: 20px;
+		}
+		
+		.img_container .badge2 {
+			width: 75px;
+			height: 75px;
+			position: absolute;
+			z-index: 99;
+			top: 105px;
+			left: 20px;
+		}
+		
+		div.event.title {
+			position: relative;
+			height: 193px;
+			width: 100%;
+		}
+		
+		div.event.title img {
+			position: absolute;
+			top: -65px;
+			z-index: 100;
+		}
+		
+		.popup {
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
+			position: fixed;
+			z-index: 999;
+			display: none;
+		}
+		
+		.popup .popup_wrap {
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+		}
+		
+		.popup iframe {
+			width: 95%;
+			height: 190px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		.video {
+			padding: 40px 30px;
+		}
+		
+		.video .swiper-slide {
+			padding: 0 10px;
+			width: 90%;
+			text-align: center;
+		}
+		
+		.video .swiper-slide .title {
+			display: table;
+			margin: 0 auto 12px auto;
+		}
+		
+		.video .swiper-slide .title img {
+			width: auto;
+			height: 15px;
+		}
+		
+		.video .swiper-slide img {
+			width: 100%;
+		}
+		
+		.swiper-pagination-bullet-active {
+			background: #fff !important;
+		}
+		
+		.video_container {
+			padding: 20px 0;
+			background: #393a3b;
+		}
+		
+		.button_box {
+			width: 100%;
+			display: table;
+			padding: 24px;
+			background: #1f1f1f;
+		}
+		
+		.button_box div {
+			width: 100%;
+			line-height: 50px;
+			font-size: 16px;
+			text-align: center;
+			font-weight: bold;
+			background: #fff;
+			border: 0;
+			border-radius: 20px;
+		}
+		
+		.button_box div.last {
+			margin-top: 20px;
+		}
+		
+		.swiper-pagination-bullet {
+			width: 4px !important;
+			height: 4px !important;
+		}
+		
+		.swiper-pagination-bullet-active {
+			background: #000 !important;
+		}
+		
+		@media all and (max-width: 780px) {
+			.img_container .badge1 {
+				width: 20vw;
+				height: 20vw;
+				position: absolute;
+				z-index: 99;
+				top: 4vw;
+				right: 4vw;
+				left: auto;
+			}
+			.img_container .badge2 {
+				width: 20vw;
+				height: 20vw;
+				position: absolute;
+				z-index: 99;
+				top: 26vw;
+				right: 4vw;
+				left: auto;
+			}
+			.video {
+				padding: 10vw 6.5vw;
+			}
+			.video .swiper-slide {
+				padding: 0 3vw;
+				width: 90%;
+				text-align: center;
+			}
+			.video .swiper-slide .title {
+				display: table;
+				margin: 0 auto 6vw auto;
+			}
+			.popup iframe {
+				width: 95%;
+				height: 50vw;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.video .swiper-slide .title img {
+				width: auto;
+				height: 5vw;
+			}
+			.video .swiper-slide img {
+				width: 100%;
+			}
+			.swiper-pagination-bullet-active {
+				background: #fff !important;
+			}
+			.video_container {
+				padding: 5vw 0;
+				background: #393a3b;
+			}
+			.button_box {
+				width: 100%;
+				display: table;
+				padding: 8vw;
+				background: #1f1f1f;
+			}
+			.button_box div {
+				width: 100%;
+				line-height: 12vw;
+				font-size: 4vw;
+				text-align: center;
+				font-weight: bold;
+				background: #fff;
+				border: 0;
+				border-radius: 6vw;
+			}
+			.button_box div.last {
+				margin-top: 3vw;
+			}
+			div.event.title {
+				height: 54vw;
+			}
+			div.event.title img {
+				top: -18vw;
+			}
+		}
+		
+		.swiper-pagination {
+			width: 60px !important;
+			left: auto !important;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 15px !important;
+			padding: 2px 14px !important;
+			font-size: 11px;
+			color: #dedede;
+			margin-right: 16px;
+		}
+		
+		.swiper-pagination span:first-child {
+			color: white;
+		}
+		
+		.kt-pro-slide .swiper-slide {
+			width: 72% !important;
+		}
+		
+		.uplus-slide-top .swiper-slide {
+			width: 90% !important;
+		}
+		
+		.uplus-slide-top img {
+			border-radius: 4px;
+		}
+
+	</style>
+<!--#html--><section class="content" style="padding-bottom: 0; display: block; min-height: auto;"><!--프로모션 이벤트 출력//s--------------------------------->
+<style>
+			div.event {
+				padding: 0;
+				margin: 0;
+				display: table;
+				width: 100%;
+			}
+			
+			.eventItem-list-type-2 .eventItem-list-price-pri,
+			.eventItem-list-type-3 .eventItem-list-price-pri {
+				display: block !important;
+			}
+			
+			.eventItem-list-type-3 {
+				display: table;
+				width: 100%;
+			}
+			
+			.eventItem-list-type-3 .eventItem-list-text {
+				padding: 12px 18px;
+			}
+			
+			.eventItem-list-type-2 .eventItem-list-badge {
+				margin-top: 12px;
+			}
+			
+			.evnet-calc4 {
+				display: table;
+			}
+			
+			section.content {
+				display: block !important;
+			}
+			
+			.evnet-calc3 > div {
+				width: calc(100% / 3);
+				float: left;
+				display: table;
+			}
+			
+			.evnet-calc4 > div {
+				width: calc(100% / 4);
+				float: left;
+			}
+			
+			.evnet-calc2 {
+				display: table;
+				width: 100%;
+			}
+			
+			.evnet-calc2 div {
+				width: calc(100% / 2);
+				float: left;
+				display: table;
+			}
+			
+			.evnet-calc2 div img {
+				width: 100%;
+			}
+			
+			div.soldout {
+				display: none;
+			}
+			
+			div.hdn {
+				display: none;
+			}
+			
+			.mt_5 {
+				margin-top: -5px !important;
+			}
+			
+			div.event img {
+				float: left;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+			
+			section.content {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.evnet-calc4 > div img,
+			.evnet-calc4 > div a {
+				width: 100%;
+			}
+			
+			p.cssp {
+				margin: 0 !important;
+				height: 0px !important;
+			}
+			
+			.eventItem-list-type-3 .eventItem-list-text {
+				height: 144.5px;
+			}
+			
+			.eventItem-list-type-2 .eventItem-list-price-pri,
+			.eventItem-list-type-3 .eventItem-list-price-pri {
+				display: block !important;
+			}
+			
+			.eventItem-list-type-3 {
+				display: table;
+				width: 100%;
+			}
+			
+			.eventItem-list-type-3 .eventItem-list-text {
+				padding: 12px 18px;
+			}
+			
+			.eventItem-list-type-2 .eventItem-list-badge {
+				margin-top: 12px;
+			}
+			
+			.evnet-calc3 > div {
+				width: calc(100% / 3);
+				float: left;
+				display: table;
+			}
+			
+			.evnet-calc2 > div {
+				width: calc(100% / 2) !important;
+				float: left;
+				display: table;
+			}
+			
+			div.soldout {
+				display: none;
+			}
+			
+			div.hdn {
+				display: none;
+			}
+			
+			.mt_5 {
+				margin-top: -5px !important;
+			}
+			
+			div.event img {
+				float: left;
+				margin: 0;
+				padding: 0;
+			}
+			
+			section.content {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.img_container {
+				position: relative;
+			}
+			
+			.img_container img {
+				width: 100%;
+			}
+			
+			p.cssp {
+				margin: 0 !important;
+				height: 0px !important;
+			}
+			
+			.event a {
+				float: left;
+			}
+			
+			.time1 {
+				position: absolute;
+				font-size: 19px;
+				color: #000;
+				top: 78.5%;
+				left: 20%;
+				display: inline-block;
+				letter-spacing: -2px;
+			}
+			
+			.time1 span {
+				font-weight: bold;
+			}
+			
+			.img_container .badge1 {
+				width: 75px;
+				height: 75px;
+				position: absolute;
+				z-index: 99;
+				top: 20px;
+				left: 20px;
+			}
+			
+			.img_container .badge2 {
+				width: 75px;
+				height: 75px;
+				position: absolute;
+				z-index: 99;
+				top: 105px;
+				left: 20px;
+			}
+			
+			div.event.title {
+				position: relative;
+				height: 193px;
+				width: 100%;
+			}
+			
+			div.event.title img {
+				position: absolute;
+				top: -65px;
+				z-index: 100;
+			}
+			
+			.popup {
+				width: 100%;
+				top: 0;
+				left: 0;
+				height: 100%;
+				position: fixed;
+				z-index: 999;
+				display: none;
+			}
+			
+			.popup .popup_wrap {
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.9);
+			}
+			
+			.popup iframe {
+				width: 95%;
+				height: 190px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.video {
+				padding: 40px 30px;
+			}
+			
+			.video .swiper-slide {
+				padding: 0 10px;
+				width: 90%;
+				text-align: center;
+			}
+			
+			.video .swiper-slide .title {
+				display: table;
+				margin: 0 auto 12px auto;
+			}
+			
+			.video .swiper-slide .title img {
+				width: auto;
+				height: 15px;
+			}
+			
+			.video .swiper-slide img {
+				width: 100%;
+			}
+			
+			.swiper-pagination-bullet-active {
+				background: #fff !important;
+			}
+			
+			.video_container {
+				padding: 20px 0;
+				background: #393a3b;
+			}
+			
+			.button_box {
+				width: 100%;
+				display: table;
+				padding: 24px;
+				background: #1f1f1f;
+			}
+			
+			.button_box div {
+				width: 100%;
+				line-height: 50px;
+				font-size: 16px;
+				text-align: center;
+				font-weight: bold;
+				background: #fff;
+				border: 0;
+				border-radius: 20px;
+			}
+			
+			.button_box div.last {
+				margin-top: 20px;
+			}
+			
+			.swiper-pagination-bullet {
+				width: 4px !important;
+				height: 4px !important;
+			}
+			
+			.swiper-pagination-bullet-active {
+				background: #000 !important;
+			}
+			
+			@media all and (max-width: 780px) {
+				.img_container .badge1 {
+					width: 20vw;
+					height: 20vw;
+					position: absolute;
+					z-index: 99;
+					top: 4vw;
+					right: 4vw;
+					left: auto;
+				}
+				.img_container .badge2 {
+					width: 20vw;
+					height: 20vw;
+					position: absolute;
+					z-index: 99;
+					top: 26vw;
+					right: 4vw;
+					left: auto;
+				}
+				.video {
+					padding: 10vw 6.5vw;
+				}
+				.video .swiper-slide {
+					padding: 0 3vw;
+					width: 90%;
+					text-align: center;
+				}
+				.video .swiper-slide .title {
+					display: table;
+					margin: 0 auto 6vw auto;
+				}
+				.popup iframe {
+					width: 95%;
+					height: 50vw;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+				.video .swiper-slide .title img {
+					width: auto;
+					height: 5vw;
+				}
+				.video .swiper-slide img {
+					width: 100%;
+				}
+				.swiper-pagination-bullet-active {
+					background: #fff !important;
+				}
+				.video_container {
+					padding: 5vw 0;
+					background: #393a3b;
+				}
+				.button_box {
+					width: 100%;
+					display: table;
+					padding: 8vw;
+					background: #1f1f1f;
+				}
+				.button_box div {
+					width: 100%;
+					line-height: 12vw;
+					font-size: 4vw;
+					text-align: center;
+					font-weight: bold;
+					background: #fff;
+					border: 0;
+					border-radius: 6vw;
+				}
+				.button_box div.last {
+					margin-top: 3vw;
+				}
+				div.event.title {
+					height: 54vw;
+				}
+				div.event.title img {
+					top: -18vw;
+				}
+			}
+			
+			.swiper-pagination {
+				width: 60px !important;
+				left: auto !important;
+				background-color: rgba(0, 0, 0, 0.5);
+				border-radius: 15px !important;
+				padding: 2px 14px !important;
+				font-size: 11px;
+				color: #dedede;
+				margin-right: 16px;
+			}
+			
+			.swiper-pagination span:first-child {
+				color: white;
+			}
+			
+			.kt-pro-slide .swiper-slide {
+				width: 72% !important;
+			}
+			
+			.uplus-slide-top .swiper-slide {
+				width: 90% !important;
+			}
+			
+			.uplus-slide-top img {
+				border-radius: 4px;
+			}
+
+		</style>
+<!--#html--><div style="display: table;"><div style="display: table;"><div class="event"><img src="https://d-img.picnique.co.kr/event/211227_kt/image1.png" width="100%" class="fr-fil fr-dii"></div><div class="event"><img src="https://d-img.picnique.co.kr/event/211227_kt/image2.png" width="100%" class="fr-fil fr-dii" data-prod-id="1478006"></div><div class="event"><img src="https://d-img.picnique.co.kr/event/211227_kt/image3.png" width="100%" class="fr-fil fr-dii" data-prod-id="1475043"></div><div class="event"><img src="https://d-img.picnique.co.kr/event/211227_kt/image4.png" width="100%" class="fr-fil fr-dii" data-prod-id="1476774"></div><div class="event"><img src="https://d-img.picnique.co.kr/event/211227_kt/image5.png" width="100%" class="fr-fil fr-dii" data-prod-id="1475121"></div></div></div><!--share ux-->
+<script></script></section></section>
+
+ 
+ 
+           <div class="theme theme-type-3 theme-parent" style="background-color:#FFFFFF;">
+               <div id="themeTag981" class="eventItem-link" data-eventid="1352" data-eventtype="THEME">
+                  <img src="https://d-img.picnique.co.kr/event/20211227/20211227/ISdqeIj_1640570127.jpg" alt="" width='100%'>
+              </div>
+               <ul class="product_list">
+                       <li class="eventItem-product-link gtm-product" data-productid="1475043" data-product-name="[마미스] 베이킹소다 액체 세탁세제 3L 4개 외 자연유래 섬유유연제/주방세제 모음전" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163XeA5a2387oiUZo880_1632387880_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475043" data-product-id="1475043" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[마미스] 베이킹소다 액체 세탁세제 3L 4개 외 자연유래 섬유유연제/주방세제 모음전</div>
+                                   <div class="ori_price">정상가:<span>19,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">50<span>%</span></span>
+                                       <span class="price">9,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1475311" data-product-name="[타월리스트] 고급호텔수건 30수 5장/10장 코마사 20수~40수 130g/150g/200g 부드러운 무형광 타올" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163C91xb2977q1vMD189_1632977189_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475311" data-product-id="1475311" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[타월리스트] 고급호텔수건 30수 5장/10장 코마사 20수~40수 130g/150g/200g 부드러운 무형광 타올</div>
+                                   <div class="ori_price">정상가:<span>19,800원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">50<span>%</span></span>
+                                       <span class="price">9,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1481089" data-product-name="[뿌리또] 주방잡화 골라담기 (종이컵,롤백,위생장갑,지퍼팩,종이호일)" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/1641euUR2135C9tcB220_1642135220_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1481089" data-product-id="1481089" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[뿌리또] 주방잡화 골라담기 (종이컵,롤백,위생장갑,지퍼팩,종이호일)</div>
+                                   <div class="ori_price">정상가:<span>1,180원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">16<span>%</span></span>
+                                       <span class="price">990<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1478194" data-product-name="[스위트몬스터]피톤치드 물티슈/베이킹소다 청소티슈 100매 x 10팩 (100매/70매/20매)" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/163euzmx7745vHsRg117_1637745117_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1478194" data-product-id="1478194" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[스위트몬스터]피톤치드 물티슈/베이킹소다 청소티슈 100매 x 10팩 (100매/70매/20매)</div>
+                                   <div class="ori_price">정상가:<span>19,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">45<span>%</span></span>
+                                       <span class="price">10,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1475121" data-product-name=" [크리넥스] 무형광 순수3겹 천연펄프 두루마리 화장지 27m 24롤x2팩 휴지" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/1635BPCU2457HA2W3757_1632457757_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475121" data-product-id="1475121" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title"> [크리넥스] 무형광 순수3겹 천연펄프 두루마리 화장지 27m 24롤x2팩 휴지</div>
+                                   <div class="ori_price">정상가:<span>27,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">30<span>%</span></span>
+                                       <span class="price">19,500<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1476459" data-product-name="[일상나눔] 퓨어워터 샤워기 세트 (헤드 1개 + 필터 7p)" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/163xWVaG54701Qc7f361_1635470361_356_4.png" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1476459" data-product-id="1476459" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[일상나눔] 퓨어워터 샤워기 세트 (헤드 1개 + 필터 7p)</div>
+                                   <div class="ori_price">정상가:<span>19,800원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">56<span>%</span></span>
+                                       <span class="price">8,800<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+               </ul>
+           </div>
+ 
+           <div class="theme theme-type-3 theme-parent" style="background-color:#FFFFFF;">
+               <div id="themeTag982" class="eventItem-link" data-eventid="1353" data-eventtype="THEME">
+                  <img src="https://d-img.picnique.co.kr/event/20211227/20211227/w6RH9tS_1640570158.jpg" alt="" width='100%'>
+              </div>
+               <ul class="product_list">
+                       <li class="eventItem-product-link gtm-product" data-productid="1476774" data-product-name="[스파클] 먹는샘물(생수) 2Lx24병 외 2종 택1 " data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/164fjN3b1282gofv5467_1641282467_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1476774" data-product-id="1476774" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[스파클] 먹는샘물(생수) 2Lx24병 외 2종 택1 </div>
+                                   <div class="ori_price">정상가:<span>12,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">19<span>%</span></span>
+                                       <span class="price">10,500<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1479566" data-product-name="[비비고] 죽/탕/찌개 골라담기 (총 43종 구성)" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163hWWTq9974pwIWh728_1639974728_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1479566" data-product-id="1479566" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[비비고] 죽/탕/찌개 골라담기 (총 43종 구성)</div>
+                                   <div class="ori_price">정상가:<span>1,800원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">42<span>%</span></span>
+                                       <span class="price">1,050<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1479687" data-product-name="[CJ제일제당] 햇반 200g x 24개 무료배송" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/1644TgiU0070qYExi145_1640070145_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1479687" data-product-id="1479687" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[CJ제일제당] 햇반 200g x 24개 무료배송</div>
+                                   <div class="ori_price">정상가:<span>39,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">43<span>%</span></span>
+                                       <span class="price">22,600<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1479152" data-product-name="[맥심] 모카골드 커피믹스 180T 외 2종" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163PEh5D9356jY8im579_1639356579_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1479152" data-product-id="1479152" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[맥심] 모카골드 커피믹스 180T 외 2종</div>
+                                   <div class="ori_price">정상가:<span>31,000원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">23<span>%</span></span>
+                                       <span class="price">23,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1479154" data-product-name="[카누] 커피 모음전 (11가지 구성)" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163rvd6X935692lDe956_1639356956_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1479154" data-product-id="1479154" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[카누] 커피 모음전 (11가지 구성)</div>
+                                   <div class="ori_price">정상가:<span>27,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">23<span>%</span></span>
+                                       <span class="price">21,500<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1479151" data-product-name="[동서식품] 차 모음전 (8종 12가지 구성)" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163uJD2Q93545elEr907_1639354907_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1479151" data-product-id="1479151" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[동서식품] 차 모음전 (8종 12가지 구성)</div>
+                                   <div class="ori_price">정상가:<span>27,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">25<span>%</span></span>
+                                       <span class="price">20,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+               </ul>
+           </div>
+ 
+           <div class="theme theme-type-3 theme-parent" style="background-color:#FFFFFF;">
+               <div id="themeTag983" class="eventItem-link" data-eventid="1354" data-eventtype="THEME">
+                  <img src="https://d-img.picnique.co.kr/event/20211227/20211227/GRFW8aN_1640570184.jpg" alt="" width='100%'>
+              </div>
+               <ul class="product_list">
+                       <li class="eventItem-product-link gtm-product" data-productid="1478006" data-product-name="[에어데이즈] KF94 새부리형 조정석 마스크 50매 대형/대형플러스/중형/중형와이드/소형 할인전" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/163AS4zE7817dpV2b483_1637817483_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1478006" data-product-id="1478006" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[에어데이즈] KF94 새부리형 조정석 마스크 50매 대형/대형플러스/중형/중형와이드/소형 할인전</div>
+                                   <div class="ori_price">정상가:<span>125,000원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">82<span>%</span></span>
+                                       <span class="price">22,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1473630" data-product-name=" [평편] 100매 대/중/소 7종컬러 국내산 100% KF94/KF80 마스크 " data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/163aZoID2902RArrB886_1632902886_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1473630" data-product-id="1473630" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title"> [평편] 100매 대/중/소 7종컬러 국내산 100% KF94/KF80 마스크 </div>
+                                   <div class="ori_price">정상가:<span>69,000원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">77<span>%</span></span>
+                                       <span class="price">15,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1475592" data-product-name="[서가]국산 MB필터 일회용 마스크(100매)블랙/화이트" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163exg2I40199ifUD960_1634019960_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475592" data-product-id="1475592" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[서가]국산 MB필터 일회용 마스크(100매)블랙/화이트</div>
+                                   <div class="ori_price">정상가:<span>12,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">62<span>%</span></span>
+                                       <span class="price">4,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1474928" data-product-name="[브리더]새부리형 KF94 마스크 50매 개별포장 외 굿스타일 컬러마스크 6종 1매입X50개" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163RcCpL16086LIGi050_1631608050_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1474928" data-product-id="1474928" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[브리더]새부리형 KF94 마스크 50매 개별포장 외 굿스타일 컬러마스크 6종 1매입X50개</div>
+                                   <div class="ori_price">정상가:<span>50,000원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">83<span>%</span></span>
+                                       <span class="price">8,400<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1475227" data-product-name="[닥터피앤비] 국산 KF94 100매 원부자재까지 ALL국산 식약처허가 마스크" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/1632LSfN2819volDK053_1632819053_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475227" data-product-id="1475227" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[닥터피앤비] 국산 KF94 100매 원부자재까지 ALL국산 식약처허가 마스크</div>
+                                   <div class="ori_price">정상가:<span>21,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">52<span>%</span></span>
+                                       <span class="price">10,500<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1475191" data-product-name="[합리적인마스크] 국산100매 소형/대형 KF94/KF80/웨어리스 4중필터 코끼리 마스크 외 어린이마스크 외 모음" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/163ejbDl2811HyLPn658_1632811658_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475191" data-product-id="1475191" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[합리적인마스크] 국산100매 소형/대형 KF94/KF80/웨어리스 4중필터 코끼리 마스크 외 어린이마스크 외 모음</div>
+                                   <div class="ori_price">정상가:<span>35,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">17<span>%</span></span>
+                                       <span class="price">29,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+               </ul>
+           </div>
+ 
+           <div class="theme theme-type-3 theme-parent" style="background-color:#FFFFFF;">
+               <div id="themeTag984" class="eventItem-link" data-eventid="1355" data-eventtype="THEME">
+                  <img src="https://d-img.picnique.co.kr/event/20211227/20211227/iJXS29t_1640570211.jpg" alt="" width='100%'>
+              </div>
+               <ul class="product_list">
+                       <li class="eventItem-product-link gtm-product" data-productid="1475160" data-product-name="[바겐슈타이거] 올스텐 퓌어집게/가위형집게 독일 조리용 집게/고기집게" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163YBjpT2707FPoPs058_1632707058_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475160" data-product-id="1475160" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[바겐슈타이거] 올스텐 퓌어집게/가위형집게 독일 조리용 집게/고기집게</div>
+                                   <div class="ori_price">정상가:<span>38,000원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">78<span>%</span></span>
+                                       <span class="price">8,500<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1475732" data-product-name="[데코룩스]1+1 주부습진방지 오래쓰는 스마트폰터치가능 고급 니트릴 고무장갑 북유럽풍 식탁매트4개세트" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163cqpG44272UhCth257_1634272257_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475732" data-product-id="1475732" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[데코룩스]1+1 주부습진방지 오래쓰는 스마트폰터치가능 고급 니트릴 고무장갑 북유럽풍 식탁매트4개세트</div>
+                                   <div class="ori_price">정상가:<span>17,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">45<span>%</span></span>
+                                       <span class="price">9,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1477317" data-product-name="[까사니] 쿠치나 IH 하이곰솥30cm 외 스텐 주방 브랜드 특가 모음전" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/product/normal/admin/163c4uhP8326IzyYL809_1638326809_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1477317" data-product-id="1477317" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title">[까사니] 쿠치나 IH 하이곰솥30cm 외 스텐 주방 브랜드 특가 모음전</div>
+                                   <div class="ori_price">정상가:<span>95,000원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">69<span>%</span></span>
+                                       <span class="price">29,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+                       <li class="eventItem-product-link gtm-product" data-productid="1478573" data-product-name=" [한샘] 마이쿡 실리콘 조리도구 세트 5종 + 거치대" data-paging-no="1" style="">
+                           <div class="img">
+                               <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163VnpP18169CesKc966_1638169966_356_4.jpg" alt="">
+                           </div>
+                           <div class="info">
+                               <div class="state">
+                                       <div class="badge red">무료배송</div>
+                                   <div class="badge red kt-membership-product-badge kt-membership-product-badge-1478573" data-product-id="1478573" style="display: none">KT 멤버십</div>
+                               </div>
+                               <div class="title"> [한샘] 마이쿡 실리콘 조리도구 세트 5종 + 거치대</div>
+                                   <div class="ori_price">정상가:<span>46,900원</span></div>
+                                   <div class="sale_price">
+                                       <span class="per">51<span>%</span></span>
+                                       <span class="price">22,900<span>원</span></span>
+                                   </div>
+                           </div>
+                       </li>
+               </ul>
+           </div>
+            <script type="text/javascript">
+                $(window).on("pageshow", function () {
+                    $("#footer-anker-relation").show();
+                    $("#footer-anker-relation").data("theme-id", "#themeTag664");
+                });
+            </script>
+ 
+            <div class="theme theme-type-9 theme-parent">
+                <div id="themeTag664" class="title" data-eventid="1104" data-eventtype="THEME">
+                    <h3>이런 상품은 어떠세요?</h3> <p>고객님들이 많이 구매했어요~</p>
+                    <img class="theme-share-btn" src="/resources/images/rewardmall/kt/v1/share.png">
+                </div>
+                <div class="product_list_wrap">
+                    <ul class="product_list">
+                            <li class="eventItem-product-link gtm-product" data-productid="1475456" data-product-name="[일동후디스] 하이뮨 프로틴 밸런스 캔&스틱 선물세트 (304gx2캔+19gx20포+보틀)">
+                                <div class="img" style="background: url('https://d-img.picnique.co.kr/c24/gobubble/admin/163C8sXh3582vzHcr555_1633582555_356_4.jpg') center / cover;"></div>
+                                <div class="info">
+                                    <div class="state">
+                                            <div class="badge red">무료배송</div>
+                                        <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475456" data-product-id="1475456" style="display: none">KT 멤버십</div>
+                                    </div>
+                                    <div class="title">
+                                        [일동후디스] 하이뮨 프로틴 밸런스 캔&스틱 선물세트 (304gx2캔+19gx20포+보틀)
+                                    </div>
+                                        <div class="ori_price">정상가:<span>134,000원</span></div>
+                                        <div class="sale_price">
+                                            <span class="per">49<span>%</span></span>
+                                            <span class="price">67,800<span>원</span></span>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="eventItem-product-link gtm-product" data-productid="1481397" data-product-name="[폴로/라코스테] 폴로 꽈베기 니트 외 인기 브랜드 BEST 상품 모음 2종 택1">
+                                <div class="img" style="background: url('https://d-img.picnique.co.kr/product/normal/admin/164GoS4x2141WsTt7997_1642141997_356_4.jpg') center / cover;"></div>
+                                <div class="info">
+                                    <div class="state">
+                                        <div class="badge red kt-membership-product-badge kt-membership-product-badge-1481397" data-product-id="1481397" style="display: none">KT 멤버십</div>
+                                    </div>
+                                    <div class="title">
+                                        [폴로/라코스테] 폴로 꽈베기 니트 외 인기 브랜드 BEST 상품 모음 2종 택1
+                                    </div>
+                                        <div class="ori_price">정상가:<span>128,000원</span></div>
+                                        <div class="sale_price">
+                                            <span class="per">35<span>%</span></span>
+                                            <span class="price">82,900<span>원</span></span>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="eventItem-product-link gtm-product" data-productid="1481256" data-product-name=" [나이키] 남성 여성 3PACK 중목/장목 스포츠양말 10종택1">
+                                <div class="img" style="background: url('https://d-img.picnique.co.kr/product/normal/admin/164Vk6631541uNCju557_1641541557_356_4.jpg') center / cover;"></div>
+                                <div class="info">
+                                    <div class="state">
+                                            <div class="badge red">무료배송</div>
+                                        <div class="badge red kt-membership-product-badge kt-membership-product-badge-1481256" data-product-id="1481256" style="display: none">KT 멤버십</div>
+                                    </div>
+                                    <div class="title">
+                                         [나이키] 남성 여성 3PACK 중목/장목 스포츠양말 10종택1
+                                    </div>
+                                        <div class="ori_price">정상가:<span>35,000원</span></div>
+                                        <div class="sale_price">
+                                            <span class="per">63<span>%</span></span>
+                                            <span class="price">12,900<span>원</span></span>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="eventItem-product-link gtm-product" data-productid="1481521" data-product-name=" [LG전자 프라엘] 메디헤어 HGN2V">
+                                <div class="img" style="background: url('https://d-img.picnique.co.kr/product/normal/admin/164yvuDb0062Or461436_1640062436_356_4.jpg') center / cover;"></div>
+                                <div class="info">
+                                    <div class="state">
+                                            <div class="badge red">무료배송</div>
+                                        <div class="badge red kt-membership-product-badge kt-membership-product-badge-1481521" data-product-id="1481521" style="display: none">KT 멤버십</div>
+                                    </div>
+                                    <div class="title">
+                                         [LG전자 프라엘] 메디헤어 HGN2V
+                                    </div>
+                                        <div class="ori_price">정상가:<span>1,790,000원</span></div>
+                                        <div class="sale_price">
+                                            <span class="per">17<span>%</span></span>
+                                            <span class="price">1,490,000<span>원</span></span>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="eventItem-product-link gtm-product" data-productid="1480367" data-product-name="[홍삼핏]간편히 녹여먹는 홍삼필름 30매X2박스">
+                                <div class="img" style="background: url('https://d-img.picnique.co.kr/product/normal/admin/164645aA0933i4ynt380_1640933380_356_4.jpg') center / cover;"></div>
+                                <div class="info">
+                                    <div class="state">
+                                            <div class="badge red">무료배송</div>
+                                        <div class="badge red kt-membership-product-badge kt-membership-product-badge-1480367" data-product-id="1480367" style="display: none">KT 멤버십</div>
+                                    </div>
+                                    <div class="title">
+                                        [홍삼핏]간편히 녹여먹는 홍삼필름 30매X2박스
+                                    </div>
+                                        <div class="ori_price">정상가:<span>200,000원</span></div>
+                                        <div class="sale_price">
+                                            <span class="per">61<span>%</span></span>
+                                            <span class="price">79,000<span>원</span></span>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="eventItem-product-link gtm-product" data-productid="1480050" data-product-name=" [란체티] BEST 화이트 셔츠 & 기모셔츠 기획전">
+                                <div class="img" style="background: url('https://d-img.picnique.co.kr/product/normal/admin/164CeGcz0667Zzwx7427_1640667427_356_4.jpg') center / cover;"></div>
+                                <div class="info">
+                                    <div class="state">
+                                            <div class="badge red">무료배송</div>
+                                        <div class="badge red kt-membership-product-badge kt-membership-product-badge-1480050" data-product-id="1480050" style="display: none">KT 멤버십</div>
+                                    </div>
+                                    <div class="title">
+                                         [란체티] BEST 화이트 셔츠 & 기모셔츠 기획전
+                                    </div>
+                                        <div class="ori_price">정상가:<span>84,000원</span></div>
+                                        <div class="sale_price">
+                                            <span class="per">81<span>%</span></span>
+                                            <span class="price">15,900<span>원</span></span>
+                                        </div>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(window).on("pageshow", function () {
+                    $("#footer-anker-recommend").show();
+                    $("#footer-anker-recommend").data("theme-id", "#themeTag665");
+                });
+            </script>
+ 
+            <div class="theme theme-type-11 theme-parent">
+                <div id="themeTag665" class="title eventItem-link" data-eventid="1103" data-eventtype="THEME">
+                    <h3>K-Deal 추천!</h3> <p>고객님께 딱 맞는 상품을 추쳔드려요</p>
+                </div>
+                <ul class="product_list">
+                        <li class="eventItem-product-link gtm-product" data-productid="1474481" data-paging-no="1" data-product-name="[뉴트리디데이] 남성 건강 쏘팔메토(3개월분) 외 건강모음전 3종 택 1" style="">
+                            <div class="img">
+                                <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/162GGpfO9270xUb51965_1629270965_356_4.jpg" alt="" style="width:100%">
+                            </div>
+                            <div class="info">
+                                <div class="state">
+                                    <div class="badge red kt-membership-product-badge kt-membership-product-badge-1474481" data-product-id="1474481" style="display: none">KT 멤버십</div>
+                                </div>
+                                <div class="title">[뉴트리디데이] 남성 건강 쏘팔메토(3개월분) 외 건강모음전 3종 택 1</div>
+                                    <div class="ori_price">정상가:<span>59,800원</span></div>
+                                    <div class="sale_price">
+                                        <span class="per">78<span>%</span></span>
+                                        <span class="price">12,900<span>원</span></span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="eventItem-product-link gtm-product" data-productid="1474663" data-paging-no="1" data-product-name="[오늘의소][추천선물] 꽃갈비를 품은 블랙앵거스 LA갈비 선물세트 2kg/3kg 택1" style="">
+                            <div class="img">
+                                <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163yAIOE00327d5BI191_1630032191_356_4.jpg" alt="" style="width:100%">
+                            </div>
+                            <div class="info">
+                                <div class="state">
+                                        <div class="badge red">무료배송</div>
+                                    <div class="badge red kt-membership-product-badge kt-membership-product-badge-1474663" data-product-id="1474663" style="display: none">KT 멤버십</div>
+                                </div>
+                                <div class="title">[오늘의소][추천선물] 꽃갈비를 품은 블랙앵거스 LA갈비 선물세트 2kg/3kg 택1</div>
+                                    <div class="ori_price">정상가:<span>104,000원</span></div>
+                                    <div class="sale_price">
+                                        <span class="per">37<span>%</span></span>
+                                        <span class="price">65,900<span>원</span></span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="eventItem-product-link gtm-product" data-productid="1475346" data-paging-no="1" data-product-name="[쿠쿠] Best 전기압력밥솥 모음전 (6인용/10인용 택1)" style="">
+                            <div class="img">
+                                <img src="https://d-img.picnique.co.kr/product/normal/admin/163ju56Q3489e5RJz004_1633489004_356_4.jpg" alt="" style="width:100%">
+                            </div>
+                            <div class="info">
+                                <div class="state">
+                                        <div class="badge red">무료배송</div>
+                                    <div class="badge red kt-membership-product-badge kt-membership-product-badge-1475346" data-product-id="1475346" style="display: none">KT 멤버십</div>
+                                </div>
+                                <div class="title">[쿠쿠] Best 전기압력밥솥 모음전 (6인용/10인용 택1)</div>
+                                    <div class="ori_price">정상가:<span>248,000원</span></div>
+                                    <div class="sale_price">
+                                        <span class="per">40<span>%</span></span>
+                                        <span class="price">149,000<span>원</span></span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="eventItem-product-link gtm-product" data-productid="1478570" data-paging-no="1" data-product-name="[농협 동의삼] 홍삼정 패밀리타임 100포 외 1종 택1" style="">
+                            <div class="img">
+                                <img src="https://d-img.picnique.co.kr/product/normal/admin/164MBX132552z2hST150_1642552150_356_4.jpg" alt="" style="width:100%">
+                            </div>
+                            <div class="info">
+                                <div class="state">
+                                        <div class="badge red">무료배송</div>
+                                    <div class="badge red kt-membership-product-badge kt-membership-product-badge-1478570" data-product-id="1478570" style="display: none">KT 멤버십</div>
+                                </div>
+                                <div class="title">[농협 동의삼] 홍삼정 패밀리타임 100포 외 1종 택1</div>
+                                    <div class="ori_price">정상가:<span>139,000원</span></div>
+                                    <div class="sale_price">
+                                        <span class="per">79<span>%</span></span>
+                                        <span class="price">29,800<span>원</span></span>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="eventItem-product-link gtm-product" data-productid="1478681" data-paging-no="1" data-product-name="[앙쥬] 24K 골드 6종+휴대용2종 세트 (쇼핑백 증정) 외 2종 택1" style="">
+                            <div class="img">
+                                <img src="https://d-img.picnique.co.kr/c24/gobubble/admin/163oDCEW8324Ljq66937_1638324937_356_4.jpg" alt="" style="width:100%">
+                            </div>
+                            <div class="info">
+                                <div class="state">
+                                        <div class="badge red">무료배송</div>
+                                    <div class="badge red kt-membership-product-badge kt-membership-product-badge-1478681" data-product-id="1478681" style="display: none">KT 멤버십</div>
+                                </div>
+                                <div class="title">[앙쥬] 24K 골드 6종+휴대용2종 세트 (쇼핑백 증정) 외 2종 택1</div>
+                                    <div class="ori_price">정상가:<span>699,000원</span></div>
+                                    <div class="sale_price">
+                                        <span class="per">94<span>%</span></span>
+                                        <span class="price">39,900<span>원</span></span>
+                                    </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+ 
+            <div class="banner_slide" id="themeTag666">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper gtm-banner" data-gtm-index="8" data-bannerid="1233">
+                            <div class="swiper-slide" onclick="location.href='https://www.kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1386&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/164rC3f31789GO8un266_1641789266_group_banner.jpg" alt=""></div>
+                            <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1391&cid=KDEAL&rid=default'"><img src="https://d-img.picnique.co.kr/sellerd_group/164BbwNL2382wSD4o653_1642382653_group_banner.jpg" alt=""></div>
+                            <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1255&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/163mjSre8155XuxVt254_1638155254_group_banner.jpg" alt=""></div>
+                            <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/subscribe?channel=EVENT&subscribeType=DAYS&referrer=KT&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/163GuYIQ9993TEQ1r055_1639993055_group_banner.jpg" alt=""></div>
+                            <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1134&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/1638FnmG36536sYEA906_1633653906_group_banner.jpg" alt=""></div>
+                            <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1161&cid=KDEAL&rid=default'"><img src="https://d-img.picnique.co.kr/sellerd_group/163LdDMg6095wWYmg955_1636095955_group_banner.jpg" alt=""></div>
+                            <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1162&cid=KDEAL&rid=default'"><img src="https://d-img.picnique.co.kr/sellerd_group/163MjMyM3653QYQUU906_1633653906_group_banner.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    <div id="share_popup" class="pro_share_popup">
+        <div class="pro_share_popup_content">
+            <div class="close"></div>
+            <ul class="share_popup_list">
+                <li>
+                    <a href="javascript:kakaoShare();">
+                        <img src="/resources/images/share/icon_kakao.png" alt="카카오톡" title="카카오톡">
+                        카카오톡
+                    </a>
+                </li>
+                <li>
+                    <!-- ios 제약 사항 -->
+                        <input type="text" id="txtUrlLink" style="position: absolute; z-index:-100; -khtml-opacity: 0; opacity: 0" readonly>
+                        <a href="javascript:urlShare()">
+                            <img src="/resources/images/share/icon_url.png" alt="URL복사" title="URL복사">
+                            URL 복사
+                        </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if ("N" == "Y") {
+                KDeal.setKtMembershipBadge();
+            }
+            var main_slide = new Swiper('.main_slide .swiper-container',
+                {
+                    pagination:
+                        {
+                            el: '.main_slide .swiper-pagination',
+                            clickable: true,
+                            renderBullet: function(index, className)
+                            {
+                                return '<div class="' + className + '">' + (menu[index]) + '</div>';
+                            },
+                        },
+                    autoplay:
+                        {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                    loop: true,
+                    initialSlide: random_index('.main_slide'),
+                });
+
+            // kakao init.
+            requirejs(["https://developers.kakao.com/sdk/js/kakao.min.js"], function(Kakao, print) {
+                Kakao.init('cc7fad66641131400392e39a1d0254be');
+            });
+
+            var paramManager = ParamManager(),
+                ssStorage = storage(StorageType.SESSION_TYEP),
+                mainUrl = ssStorage.getData('kt-main-url'),
+                rid = KDeal.get('rid');
+
+            paramManager.init();
+
+            // 메인 URL 저장
+            if (!mainUrl) {
+                ssStorage.setData('kt-main-url', location.href);
+            }
+
+            $('img[data-coupon-id]').click(function(){
+                assignCoupon($(this).data('coupon-id'));
+            });
+
+            $('img[data-prod-id]').click(function(){
+                var prodId = $(this).data('prod-id');
+                location.href="/m/product/details/kt?cid=KDEAL&proCode=" + btoa(prodId) + "&rid=" +  KDeal.get('rid');
+            });
+
+            $('.eventItem-product-link').click(function () {
+                var productId = $(this).data('productid');
+                location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(productId) + "&rid=" +  KDeal.get('rid');
+                return false;
+            });
+
+            $('.eventItem-link').click(function () {
+                var ref = "KT";
+                var eventId = $(this).data('eventid');
+                var eventType = $(this).data('eventtype');
+                var referrer = ref;
+                var evtType = "html";
+
+                switch (eventType) {
+                    case "PRODUCT" :
+                        evtType = "product";
+                        break;
+                    case "HTML" :
+                        evtType = "html";
+                        break;
+                    case "THEME" :
+                        evtType = "theme";
+                        break;
+                }
+                location.href = "/m/event/kt/" + evtType + "?referrer=" + referrer + "&id=" + eventId + "&cid=KDEAL" + "&rid=" +  KDeal.get('rid');
+                return false;
+            });
+
+            // html 전시페이지 소스에서 등록된 배송조회, 1:1문의 버튼 이벤트 처리.
+            $(document).on('click', '.go-deliver-from-html', goDeliverySearch);
+            $(document).on('click', '.go-qna-from-html', goQnaSearch);
+
+
+            $('.kt-theme-2-list').each(function(e){
+                $( this ).css({width: $( this ).children('li').width() * $( this ).children('li').length + (($( this ).children('li').length - 1) * 20) + 'px' })
+            });
+
+            // 상품리스트 페이징 처리
+            $('.paging_load_btn').click(function() {
+                var $this = $(this)
+                    , pagingNo = $this.data('paging-no')
+                    , pagingLimit = $this.data('paging-limit');
+                pagingNo++;
+                // limit 페이지보다 크면 false;
+                if (pagingNo > pagingLimit) {
+                    return false;
+                }
+                // 데이터 load
+                $this.find('.span-load-no').text(pagingNo);
+                $this.data('paging-no', pagingNo);
+                $this.closest('.theme-parent').find(".eventItem-product-link[data-paging-no='" + pagingNo + "']").show();
+                $(window).scrollTop($this.closest('.theme-parent').find(".eventItem-product-link[data-paging-no='" + pagingNo + "']").offset().top - 35)
+
+                // limit 페이지랑 같으면 특가 상품 더보기 버튼으로 변경
+                if (pagingNo == pagingLimit) {
+                    $this.hide();
+                    $this.closest('.theme-parent').find('.paging_detail_btn').show();
+                }
+                return false;
+            });
+
+            // 특가 상품 더보기 버튼 클릭 시 처리
+            $('.paging_detail_btn').click(function () {
+                $(this).closest('.theme-parent').find('.eventItem-link').click();
+                return false;
+            });
+
+            var cate_slide = new Swiper('.cate_slide .swiper-container', {
+                grabCursor: true,
+                on : {
+                    transitionEnd: function(){
+                        $('.product_list_group_cate > div').hide()
+                        $('.product_list_group_cate > div').eq(this.realIndex).show();
+                        $('.theme-type-5 .theme-group-btn-cate').css('transform','scale(1)')
+                        $('.theme-type-5 .theme-group-btn-cate').eq(this.realIndex).css('transform','scale(1.2)')
+                        $('.menu_wrap').css({transition: "300ms"})
+                        $('.menu_wrap').animate({scrollLeft: this.realIndex*$('.theme-group-btn-cate').width()}, 300);
+                    }
+                },
+                autoplay: {
+                    delay: 7000,
+                    disableOnInteraction: false,
+                },
+            });
+
+            // 브랜드, 카테고리형 테마 show/hide 처리
+            $('.theme-group-btn').click(function () {
+                var $this = $(this)
+                    , themeId = $this.data('theme-id')
+                    , groupId = $this.data('group-id');
+                $('.theme-group' + themeId).hide();
+                $('#themeGroup' + themeId + '-' + groupId).show();
+
+                eval('banner_slide_'+ themeId + '_' + groupId).update(true)
+                eval('banner_slide_'+ themeId + '_' + groupId).slideTo(random_index('banner_slide_'+ themeId + '-' + groupId))
+
+
+                return false;
+            });
+
+            $('.theme-group-btn-cate').click(function () {
+                var $this = $(this)
+                    , themeId = $this.data('theme-id')
+                    , groupId = $this.data('group-id');
+                $('.theme-group-btn-cate').css('transform','scale(1)');
+                cate_slide.slideTo($this.index());
+                cate_slide.autoplay.stop();
+                $this.css('transform','scale(1.2)');
+                return false;
+            });
+
+
+            // BEST_PRODUCT_SORT 테마 정렬 change
+            $('.theme-sort-select').change(function () {
+                var selectValue = $(this).val(),
+                    $productListUl =  $(this).closest('.theme-parent').find('.product_list');
+
+                var itemList = [];
+
+                // 배열 생성
+                $productListUl.find('li').each(function(i, e) {
+                    var $item = $(e),
+                        sortData = {
+                            item : $item,
+                            itemChild : $item.html(),
+                            best : $item.data('sort-best'),
+                            price : $item.data('sort-price'),
+                            delivery : $item.data('sort-delivery'),
+                            regist : $item.data('sort-regist')
+                        };
+                    itemList.push(sortData);
+                });
+
+                // 정렬
+                if (selectValue == 'best_asc') {
+                    itemList.sort(function(a, b) { // 오름차순
+                        return a['best'] - b['best'];
+                    });
+                } else if (selectValue == 'regist_recent') {
+                    itemList.sort(function(a, b) { // 내림차순
+                        return b['regist'] - a['regist'];
+                    });
+                } else if (selectValue == 'price_low') {
+                    itemList.sort(function(a, b) { // 오름차순
+                        return a['price'] - b['price'];
+                    });
+                } else if (selectValue == 'price_high') {
+                    itemList.sort(function(a, b) { // 내림차순
+                        return b['price'] - a['price'];
+                    });
+                } else if (selectValue == 'delivery_free') {
+                    itemList.sort(function(a, b) { // 오름차순
+                        return a['best'] - b['best'];
+                    });
+                    itemList.sort(function(a, b) { // 내림차순
+                        return b['delivery'] - a['delivery'];
+                    });
+                }
+
+                // append();
+                $productListUl.html('');
+                itemList.forEach(function(data) {
+                    $productListUl.append(data.item);
+                    data.item.html(data.itemChild);
+                });
+
+                $('.eventItem-product-link').click(function () {
+                    var productId = $(this).data('productid');
+                    location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(productId) + "&rid=" +  KDeal.get('rid');
+                    return false;
+                });
+                
+                return false;
+            });
+
+
+            // 공유하기 버튼 클릭 처리
+            $('.theme-share-btn').click(function () {
+                $('#share_popup').show();
+                return false;
+            });
+            $('#share_popup .close').on('click',function(){
+                $('#share_popup').hide();
+                return false;
+            });
+            $('#share_open').on("click",function(){
+                $('#share_popup').show();
+                return false;
+            });
+
+            var banner_slide = new Swiper('.banner_slide .swiper-container', {
+                loop: true,
+                grabCursor: true,
+                initialSlide: random_index('.banner_slide'),
+            });
+
+            var eventId = '1233';
+            if (eventId === '1172') {
+                $("#footer-anker-event").show();
+            }
+
+
+            // 매일받기 12월 이벤트 팝업 처리 공통
+            if (eventId === '953' || eventId === '485' ) {
+                // DailyEventPopup.start();
+            }
+
+        });
+
+        function anker(tag, id){
+            $(window).scrollTop($(id).offset().top-50);
+            $(".themeTagBox a").removeClass("active");
+            $(tag).addClass('active')
+        }
+
+        // 공유하기 처리
+        function urlShortener(url) {
+            var shortUrl    = url.split("?")[0];
+            var productId   = getQueryParam("id");
+            var referrer    = getQueryParam("referrer");
+
+            shortUrl += "?id=" + productId + "&referrer=" + referrer;
+
+            return shortUrl;
+        }
+        // 카카오톡 공유
+        function kakaoShare() {
+
+            var url = window.location.href;
+            url = url.replace("https://", "http://");
+
+            requirejs(["https://developers.kakao.com/sdk/js/kakao.min.js"], function(Kakao, print) {
+                Kakao.Link.sendDefault({
+                    objectType: 'feed',
+                    content: {
+                        title: "KT 프리미엄 쇼핑혜택",
+                        imageUrl: "https://kdeal.co.kr/m/resources/images/main/kt_bi_logo.png",
+                        link: {
+                            mobileWebUrl: url,
+                            webUrl: url
+                        }
+                    },
+                    buttons: [
+                        {
+                            title: '구경하러가기',
+                            link: {
+                                mobileWebUrl: url,
+                                webUrl: url
+                            }
+                        }
+                    ],
+                    fail: function(res) {
+                        console.log(res);
+                    }
+                });
+            });
+        }
+        function urlShare() {
+            var url = window.location.href;
+            url = url.replace("http://", "https://");
+
+            $("#txtUrlLink").val(url);
+            $("#txtUrlLink").select();
+
+            try {
+                // The important part (copy selected text)
+                var successful = document.execCommand('copy');
+                AlertUtil.open("URL이 클립보드에 복사되었습니다.");
+
+                // if(successful) answer.innerHTML = 'Copied!';
+                // else answer.innerHTML = 'Unable to copy!';
+            } catch (err) {
+                alert("URL 복사에 실패했습니다.");
+            }
+        }
+    </script>
+
+
+    <script src="/resources/lib/mobile/js/excoupon.js"></script>
+    <script>
+        $(document).ready(function() {
+            var excoupon = ExCoupon();
+
+            // 쿠폰 다운로드 요청
+            $('#issue-coupon-btn').on('click', function() {
+                KDeal.isCertified({success : location.href}, function() {
+                    var couponCode = $('#issue-code-input').val();
+
+                    if (couponCode  == "") {
+                        AlertUtil.open("쿠폰코드를 입력해주세요.");
+                        return false;
+                    }
+
+                    excoupon.issueCode(couponCode
+                        , function(message) {
+                            CouponAlertUtil.open(message, "할인쿠폰 상세조건은 My페이지 쿠폰함에서 확인하실 수 있습니다."
+                                , function() { // 쿠폰함 보기
+                                    location.href = '/m/mypage/nonuser/kt/coupon?cid=KDEAL';
+                                }
+                                , function() { // 홈으로
+                                    goRewardmallHome();
+                                }
+                            );
+                        }, function(message) {
+                            AlertUtil.open(message);
+                        }
+                    );
+                    return false;
+                });
+            });
+        });
+    </script>
+</section>
+
+<!-- /.content -->
+</div>
+
+
+</div>
+    <div class="category_page_wrap" style="display:none;">
+      <div class="category_page">
+      <div class="category_page_cont_wrap">
+        <div class="title">카테고리 <div class="cate_close"><img src="/resources/images/rewardmall/kt/v1/cate_close.png" alt=""></div></div>
+        <ul class="cate_page_menu">
+                <li class="footer-category-btn eventItem-link" data-eventid="1123" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/162bAxBp3394Lfviz360_1623394360_group.png" alt="">
+                    <div class="text"> 건강식품</div>
+                </li>
+                <li class="footer-category-btn eventItem-link" data-eventid="1122" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/162vaEl63394YcemS367_1623394367_group.png" alt="">
+                    <div class="text"> 가공/신선</div>
+                </li>
+                <li class="footer-category-btn eventItem-link" data-eventid="1124" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/162Fs77P33942GdSP380_1623394380_group.png" alt="">
+                    <div class="text"> 생활/건강</div>
+                </li>
+                <li class="footer-category-btn eventItem-link" data-eventid="1121" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/162OFhGW3394OXOF3386_1623394386_group.png" alt="">
+                    <div class="text"> 디지털/가전</div>
+                </li>
+                <li class="footer-category-btn eventItem-link" data-eventid="1125" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/162exAiq3394dfTcc394_1623394394_group.png" alt="">
+                    <div class="text"> 스포츠/레저</div>
+                </li>
+                <li class="footer-category-btn eventItem-link" data-eventid="1120" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/1622FOth3394jWGME405_1623394405_group.png" alt="">
+                    <div class="text"> 패션/뷰티</div>
+                </li>
+                <li class="footer-category-btn eventItem-link" data-eventid="1130" data-eventtype="THEME">
+                    <img src="https://d-img.picnique.co.kr/sellerd_group/1622Adnh33945pwEU412_1623394412_group.png" alt="">
+                    <div class="text"> 출산/육아</div>
+                </li>
+        </ul>
+        <div class="cate_slide2">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                        <div class="swiper-slide" onclick="location.href='https://www.kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1386&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/164rC3f31789GO8un266_1641789266_group_banner.jpg" alt=""></div>
+                        <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1391&cid=KDEAL&rid=default'"><img src="https://d-img.picnique.co.kr/sellerd_group/164BbwNL2382wSD4o653_1642382653_group_banner.jpg" alt=""></div>
+                        <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1255&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/163mjSre8155XuxVt254_1638155254_group_banner.jpg" alt=""></div>
+                        <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/subscribe?channel=EVENT&subscribeType=DAYS&referrer=KT&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/163GuYIQ9993TEQ1r055_1639993055_group_banner.jpg" alt=""></div>
+                        <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1134&cid=KDEAL'"><img src="https://d-img.picnique.co.kr/sellerd_group/1638FnmG36536sYEA906_1633653906_group_banner.jpg" alt=""></div>
+                        <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1161&cid=KDEAL&rid=default'"><img src="https://d-img.picnique.co.kr/sellerd_group/163LdDMg6095wWYmg955_1636095955_group_banner.jpg" alt=""></div>
+                        <div class="swiper-slide" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1162&cid=KDEAL&rid=default'"><img src="https://d-img.picnique.co.kr/sellerd_group/163MjMyM3653QYQUU906_1633653906_group_banner.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        </div>
+     </div>
+    </div>
+    </div>
+    <div class="tab_bar">
+        <ul>
+            <li id="cate_button">
+                <img src="/resources/images/rewardmall/kt/v1/bt_cate.png" alt="bt_cate" title="bt_cate" />
+                <div class="text">카테고리</div>
+            </li>
+            <li onclick="location.href='/m/search/kt/main?cid=KDEAL'">
+                <img src="/resources/images/rewardmall/kt/v1/bt_search.png" alt="bt_search" title="bt_search" />
+                <div class="text">검색</div>
+            </li>
+            <li class="home go-main-home">
+                <img src="/resources/images/rewardmall/kt/v1/bt_home.png" alt="bt_home" title="bt_home" />
+                <div class="text">홈</div>
+            </li>
+            <li id="go-delivery-search">
+                <img src="/resources/images/rewardmall/kt/v1/bt_member.png" alt="bt_member" title="bt_member" />
+                <div class="text">마이페이지</div>
+            </li>
+            <li onclick="location.href='/m/search/kt/main?cid=KDEAL&activeFoot=last'">
+                <img src="/resources/images/rewardmall/kt/v1/bt_last.png" alt="bt_last" title="bt_last" />
+                <div class="text">최근</div>
+            </li>
+        </ul>
+    </div>
+<div class="toolkit">
+    <div class="toolkit_wrap">
+        <div class="left_toolkit" style="display: none;">
+            <a href="javascript:history.back();">
+                <img src="/resources/images/rewardmall/kt/v1/back_button.png" alt="back_button" title="back_button" />
+            </a>
+        </div>
+        <div class="right_toolkit">
+            <img id="footer-anker-event" class="eventItem-link" data-eventid="1177" data-eventtype="THEME" src="/resources/images/rewardmall/kt/v1/event.png" alt="event" title="event" style="display: none;" />
+            <img id="footer-anker-recommend" src="/resources/images/rewardmall/kt/v1/recommend.png" alt="recommend" title="recommend" onclick="footerAnker(this);" style="display: none;" />
+            <img id="footer-anker-relation" src="/resources/images/rewardmall/kt/v1/relation.png" alt="relation" title="relation" onclick="footerAnker(this);" style="display: none;" />
+            <img
+            src="/resources/images/rewardmall/kt/v1/top_button.png"
+            alt="top_button"
+            style="display: none"
+            title="top_button"
+            class="top_button"
+            />
+        </div>
+    </div>
+</div>
+
+<div style=" background:#535353; padding:16px 24px 48px 24px; font-size:11px; color:#fff; font-weight:300; line-height:1.5;">
+    <div style="border-bottom: 1px solid #373737; margin-bottom: 15px; padding-bottom: 15px;">
+        ㈜케이티는 통신판매 중개자이며 통신판매 당사자가 아닙니다.<br>
+        본 K-Deal사이트에서 제3자가 판매하는 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다. ㈜나스미디어가 K-Deal 사이트 운영을 대행하고 있습니다.<br>
+    </div>
+    ㈜케이티<br>
+    경기도 성남시 분당구 불정로 90 (정자동) <br>
+    대표이사 구현모<br>
+    사업자 등록번호 102-81-42945  <a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=1028142945&apv_perm_no=" target="_blank">사업자번호조회</a><br>
+    통신판매업 신고번호 2002-경기성남-0048 <a href="https://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2002378010630200048" style="text-decoration: underline" target="_blank">사업자정보확인</a><br>
+    K-Deal 고객센터: 1522-2856 (평일 09:30~18:30, 유료)<br>
+    이메일문의 : cs@kdeal.co.kr<br>
+    호스팅제공자 : 주식회사 케이티<br>
+    COPYRIGHT ⓒ kt corp, ALL RIGHTS RESERVED.<br>
+    <div class="hot-bottom-info" style="margin-top:10px;">
+        <a href="/m/policy/rewardmall/terminfo/kt/KT_BUY_PURCHASE_2V?referrer=KT" style="padding:2px 10px; background: #363636; border-radius:3px; color:#fff;">이용약관</a>
+        <a href="/m/policy/rewardmall/terminfo/kt/KT_PRIVACY_POLICY_3V?referrer=KT" style="padding:2px 10px; background: #363636; border-radius:3px; color:#fff; margin-left:12px">개인정보처리방침</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGLJwWnXdxwzKcOs74F4sVOo7jlOtObK2DtD9haRaa0DBuOg/viewform" style="padding:2px 10px; background: #363636; border-radius:3px; color:#fff; margin-left:12px">입점문의</a>
+    </div>
+</div>
+
+<!-- wrapper s. -->
+<div class="wrapper pos_a" id="__ORDER_ADDRESS_SET_LAYER__" style="z-index: 3000; width: 100%; position: fixed; top: 0px; background-color: rgba(0, 0, 0, 0.1) !important; display:none">
+    <!-- Main Header -->
+    <header class="main-header" style="border-left: 0px;">
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <div class="navbar-custom-menu de-top-menu clear-both" style="margin-top:0">
+                <div class="de_title"><span>배송지 설정</span></div>
+                <div class="de_cls">
+                    <span>
+                        <a id="__ADDRESS_SET_POPUP_CLOSE__">
+                            <img src="/resources/images/main/curation_btn_close.png" width="20">
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="navbar-custom-menu depv-top-menu clear-both">
+                <ul class="de_menu_ul" id="__ORDER_ADDRESS_SET_MENU__">
+                    <li class="de_li_in" style="border-bottom: 2px solid #1BAEC5; color: #1BAEC5;"><a id="__ADDRESS_LIST_SET_BTN__">배송지 목록</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content_p0" >
+        <div class="de_list_grid" id="__ORDER_ADDRESS_SELECT_SET_LAYER__">
+            <ul id="__ORDER_ADDRESS_SCROLL_AREA__" style="height:340px;overflow:scroll;">
+            </ul>
+            <ul>
+                <li class="de_input_hf">
+                    <div class="de_fnbtn" style="background: #1BAEC5">
+                        <span id="__SELECT_ADDRESS_BTN__">배송지 선택</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Left side column. contains the logo and sidebar -->
+</div>
+
+<!-- ./wrapper -->
+
+
+
+<!-- LOGGER(TM) TRACKING SCRIPT V.40 FOR logger.co.kr / 53891 : COMBINE TYPE / DO NOT ALTER THIS SCRIPT. -->
+<!-- END OF LOGGER TRACKING SCRIPT -->
+
+<!-- Naver Shopping -->
+
+</div>
+</body>
+
+
+<script type="text/mustache-tmpl" id="__DIMMED_LAYER_TMPL__">
+<div id="__DIMMED_LAYER__" style="position:absolute; width:100%; text-align:center;  height:0px; top:0px; z-index:2000; background:rgba(0,0,0,0.6);"></div>
+</script>
+<script type="text/mustache-tmpl" id="__ADDRESS_FIND_POP_TITLE_TMPL__">
+    <ul>
+        <li class="de_input_h1">
+            <span>
+                <div class="cf_btn" style="float:right; margin-right:15px;" onclick="$('#__EMBED_LAYER__').html(''); $('.de_list_input').css('display','block')">
+                    <span>주소검색 닫기</span>
+                </div>
+            </span>
+        </li>
+    </ul>
+</script>
+<script type="text/mustache-tmpl" id="__ADDRESS_BOOK_ITEM_TMPL__">
+    <li class="de_list_inner" onclick="toggle(this);">
+        <div data-address-book-idx='{{id}}'
+             data-recipient='{{name}}'
+             data-address='{{address}}'
+             data-address-detail='{{addressDetail}}'
+             data-zone-code='{{zipCode}}'
+             data-tel='{{addressMobileNumber}}'
+             data-is-default='{{isDefault}}'
+             class="de_list-chk"
+             id = "address_book">
+             <img src="/resources/images/cart/cart-check-{{onoff}}.png" width="20"
+                  data-on="{{onoff}}"
+                  data-toggle-group="__ADDRESS_LIST__"
+                  data-on-img="/resources/images/cart/cart-check-on.png"
+                  data-off-img="/resources/images/cart/cart-check-off.png" >
+        </div>
+        <div class="de_list-info-on">
+            <div class="de_list_h1">{{name}}</div>
+            <div class="de_list_h2">{{address}} {{addressDetail}}</div>
+            <div class="de_list_h3"><Span>{{addressMobileNumber}}</span></div>
+        </div>
+    </li>
+</script>
+
+<script type="text/mustache-tmpl" id="__ADDRESS_BOOK_EMPTY_MSG_TMPL__">
+    <li class="de_list_inner" style="text-align:center;  padding-top:20px;">
+        <span style="width:300px; float:left; width:100%; font-size:20px; color:#5c5c5c; ">배송지가 존재하지 않습니다.</span>
+        <span style="width:300px; float:left; width:100%; font-size:12px; color:#45b8cb; margin-top:5px; ">신규배송지를 새로입력 해주세요.</span>
+    </li>
+</script>
+
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+
+<script type="text/javascript">
+    function onlyNumber(event) {
+        event = event || window.event;
+        var keyID = (event.which) ? event.which : event.keyCode;
+        if ((keyID >= 48 && keyID <= 57) || (keyID >= 96 && keyID <= 105) || keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39)
+            return;
+        else
+            return false;
+    }
+    function removeChar(event) {
+        event = event || window.event;
+        var keyID = (event.which) ? event.which : event.keyCode;
+        if (keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39)
+            return;
+        else
+            event.target.value = event.target.value.replace(/[^0-9]/g, "");
+    }
+
+    //푸터 상세정보 등장애니메이션 전체카테고리 슬라이드 애니메이션
+    // <!-- ▼ ▲ -->
+    function allinfo_view(){
+        $show = $("#ft_info").css("display");
+        if($show == 'none') {
+            $("#ft_info").show();
+            $('#__ARROW__').html('▲');
+        }
+        else {
+            $("#ft_info").hide();
+            $('#__ARROW__').html('▼');
+        }
+    }
+
+    function toggle(tag) {
+        var toggleGroup = $(tag).find('img').data('toggle-group');
+        if(toggleGroup) {
+            $('[data-toggle-group='+toggleGroup+']').each(function(idx, elem){
+                $(elem).data('on','off');
+                $(elem).attr('src',$(elem).data('off-img'));
+            });
+        }
+
+        var onoff = $(tag).find('img').data('on');
+        if (onoff == 'on') {
+            onoff = 'off';
+        } else {
+            onoff = 'on';
+        }
+
+        $(tag).find('img').data('on', onoff);
+
+        $(tag).find('img').attr('src',$(tag).find('img').data(onoff + "-img" ));
+    }
+
+    function openProviderInfoPopup(){
+
+        var url ="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=5518800073";
+        window.open(url, "communicationViewPopup", "width=750, height=700;");
+        return false;
+    } // openProviderInfoPopup
+
+    $(document).ready(function() {
+        $("#bizInfo").off('click').click(openProviderInfoPopup);
+    });
+
+    var didScroll = false
+
+    $(window).scroll(function (e) {
+        var scrollTop = $(window).scrollTop();
+        if(!$('body, html').hasClass('not_scroll')){
+            if (didScroll == true) {
+                $(".tab_bar").css({ transform: "translateY(70px)" });
+                $(".toolkit").css({ transform: "translateY(50px)" });
+            } else {
+                didScroll = true;
+            }
+        }
+
+        clearTimeout($(this).data("scrollTimeout"));
+
+        $(this).data(
+            "scrollTimeout",
+            setTimeout(
+                function () {
+                    $(".tab_bar").css({ transform: "translateY(0)" });
+                    $(".toolkit").css({ transform: "translateY(0)" });
+                },
+                1500,
+                e
+            )
+        );
+
+        if (scrollTop > 60) {
+            $(".main_nav").css({ position: "fixed" });
+            $("header").css({ "margin-bottom": "32px" });
+        } else {
+            $(".main_nav").css({ position: "relative" });
+            $("header").css({ "margin-bottom": "0px" });
+        }
+    });
+
+    $(".top_button").on("click", function () {
+        $(window).scrollTop(0);
+    });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $(".top_button").show();
+        } else {
+            $(".top_button").hide();
+        }
+    });
+
+    $(document).ready(function(){
+        var posY;
+
+        $('#cate_button').click(function(){
+            posY = $(window).scrollTop();
+            $('.category_page_wrap').show();
+            $("html, body").addClass("not_scroll");
+            function random_index(className) {
+                var index = Math.floor(Math.random()*($(className).children('div').children('div').children('.swiper-slide').length));
+                return index;
+            }
+            new Swiper('.cate_slide2 .swiper-container', {
+                loop: true,
+                initialSlide:random_index(".cate_slide2"),
+            });
+
+
+        })
+
+        $('.cate_close').click(function(){
+            $("html, body").removeClass("not_scroll");
+            $('.category_page_wrap').hide();
+            posY = $(window).scrollTop(posY);
+        })
+        $('.eventItem-link').click(function () {
+            var ref = "KT";
+            var eventId = $(this).data('eventid');
+            var eventType = $(this).data('eventtype');
+            var referrer = ref;
+            var evtType = "html";
+
+            switch (eventType) {
+                case "PRODUCT" :
+                    evtType = "product";
+                    break;
+                case "HTML" :
+                    evtType = "html";
+                    break;
+                case "THEME" :
+                    evtType = "theme";
+                    break;
+            }
+            location.href = "/m/event/kt/" + evtType + "?referrer=" + referrer + "&id=" + eventId + "&cid=KDEAL" + "&rid=" +  KDeal.get('rid');
+            return false;
+        });
+
+        // 이전 히스토리 있을시에만 백버튼 노출
+        if (document.referrer && document.referrer !== document.location.origin+"/" && document.referrer !== document.location.href) {
+            $(".left_toolkit").show();
+        }
+    });
+
+    function footerAnker(target) {
+        var themeId = $(target).data("theme-id");
+        $(window).scrollTop($(themeId).offset().top - $('.main_nav').innerHeight());
+        return false;
+    }
+</script>
+
+</html>
+<script>if(typeof(cacheInit) == 'function'){ cacheInit(); }</script>
