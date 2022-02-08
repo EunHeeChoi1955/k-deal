@@ -1503,12 +1503,12 @@
 $(document).ready(function() {    
 function progress(timeleft, timetotal, $element) {
 	var progressBarWidth = (timeleft / timetotal) * $element.width();
-    $element.find('.demowrap').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 2000, 'linear');
+    $element.find('.demowrap').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 20000, 'linear');
     // .html(timeleft + " 남음")
     if(timeleft > 0) {
         setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
-        }, 2000);
+        }, 20000);
     }
 };
 progress(20, 20, $('.progressBar'));
