@@ -231,9 +231,9 @@
         });
     }
 
-    function goProductDetail(prodId) {
-        location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(prodId);
-    }
+    // function goProductDetail(prodId) {
+    //     location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(prodId);
+    // }
 
     function goQnaSearch() {
         KDeal.isCertified({
@@ -1476,137 +1476,74 @@
             .event:hover{cursor:hand;}
 		</style>
 
+
+     
         <!--#html-->
         <div style="display: table;">
             <div style="display: table;">
-                <div class="event"><img src="./d-img.picnique.co.kr/event/220204_kt/1.png" width="100%" class="fr-fil fr-dii"></div>
-                <div class="event "><img src="./d-img.picnique.co.kr/event/220204_kt/2.png" width="100%" class="fr-fil fr-dii " data-prod-id="1478006"></div>
-                <div class="event eventPBar">
-                    <div class="progressBar">
-                        <div class="demowrap">
-                            <div id="demo">
-                              <div id="demotext"></div>
-                            </div>        
-                        </div>
-                    </div>                
-                </div>                
-                <div class="event"><img src="./d-img.picnique.co.kr/event/220204_kt/3.png" width="100%" class="fr-fil fr-dii" data-prod-id="1475043"></div>
+                <div class="event"><img src="./d-img.picnique.co.kr/event/220208_kt/1.png" width="100%" class="fr-fil fr-dii"></div>
+                <div class="event"><a href="javascript:" class=" modalBtn "><img src="./d-img.picnique.co.kr/event/220208_kt/2.png" width="100%" class="fr-fil fr-dii " data-prod-id="1478006"></a></div>
+            
+                <div class="event"><a href="javascript:" class=" modalBtn "><img src="./d-img.picnique.co.kr/event/220208_kt/3.png" width="100%" class="fr-fil fr-dii " data-prod-id="1478006"></a></div>
+                            
+                <div class="event"><img src="./d-img.picnique.co.kr/event/220208_kt/4.png" width="100%" class="fr-fil fr-dii" data-prod-id="1475043"></div>
             </div>
-            <div id="themeTag981" class="eventItem-link" data-eventid="1352" data-eventtype="THEME">
-                <img src="./d-img.picnique.co.kr/event/220204_kt/4.png" alt="" width="100%">
+            <div id="themeTag981" onclick="location.href='https://kdeal.co.kr/m/event/kt/theme?referrer=KT&id=1293&cid=KDEAL'" >                
+                    <img src="./d-img.picnique.co.kr/event/220208_kt/5.png" alt="" width="100%">                 
             </div>
         </div><!--share ux-->
-        <div id="app"></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {    
-function progress(timeleft, timetotal, $element) {
-	var progressBarWidth = (timeleft / timetotal) * $element.width();
-    $element.find('.demowrap').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 20000, 'linear');
-    // .html(timeleft + " 남음")
-    if(timeleft > 0) {
-        setTimeout(function() {
-            progress(timeleft - 1, timetotal, $element);
-        }, 20000);
-    }
-};
-progress(20, 20, $('.progressBar'));
-});
-</script>
+
+
+         <!-- 판매마감 모달창  -->
+         <div class="event_modal1_wrapper" style="display: none;" data-start="20220114090000" data-end="20220120235959">
+            <div class="event_modal1">        
+                <div class="modaltextbox">
+                    <h2>판매 마감</h2>
+                    <h4>구매 가능 시간이 마감되었습니다.<br>
+                        다음 특가도 기대해 주세요.
+                        </h4>
+                    <a href="javascript:" class="btnclose">확인</a>
+                </div>        
+            </div>
+        </div>
+        <script>
+
+        	window.onload = function(){
+			
+			$('.modalBtn').on({
+				click:function(){
+					$('.event_modal1_wrapper').show();
+					$('html').addClass('addScroll');
+				}
+			});
+			$('.btnclose').on({
+				click:function(){
+					$('.event_modal1_wrapper').hide();
+					$('html').removeClass('addScroll');
+				}
+			});
+		}
+
+        </script>
+ 
 
 <style>
-.eventPBar{
-    background: #000;
-    position: relative;
-}
-   
-.eventPBar .progressBar {
-   
 
-    
-    width: 80.2%;    
-    margin: 0 auto;
-    content: '';
-    height: 38px;
-    background: #e4e4e4; 
-    display: block;    
-  
-}
+    .event_modal1_wrapper { width: 100%;  position: fixed;   z-index: 100;   display: flex;   height: 100%;   top: 0;   left:0;   background: rgba(1, 1, 1, 0.7);   justify-content: center;   align-items: center;}
+    .event_modal1_wrapper .event_modal1{ background:#fff; display: block;  padding: 30px 0;border-radius: 10px; width: 300px; margin: 48% auto 50% auto ;}
+    .event_modal1_wrapper .event_modal1 .modaltextbox{  text-align: center;  width: 100%;  letter-spacing: -0.2px;}
+    .event_modal1_wrapper .event_modal1 .modaltextbox h2 { font-size: 20px; font-weight: 700; margin: 0; }
+    .event_modal1_wrapper .event_modal1 .modaltextbox h4 {  font-size: 14px; font-weight: 500;padding-bottom: 15px; line-height: 130%;}
+    .event_modal1_wrapper .event_modal1 .modaltextbox .btnclose { background-color: #5095ff;color:#fff;font-weight: 600; border-radius: 2px;border: 0; padding: 8px 35px; margin: 0 auto; }
 
-.eventPBar .progressBar .demowrap {
-    position: relative;
-    z-index:2 ;
-    height: 100%;  
-    padding: 0;
-    line-height: 38px; /* same as #progressBar height if we want text middle aligned 텍스트 중간에 놓기 */
-    width: 0;
-    background-image:linear-gradient(to right, #00a3ff,#4e42fe, #a422ff,#d110ff);
-    box-sizing: border-box;
-}
 
-.eventPBar .progressBar div #demo #demotext{
-    position: relative;
-    z-index:5 ;
-    content: '';
- text-align: left;
- font-weight:700;
- font-size: 14px;
- color:#fffcb2; 
- text-indent: 5px;
- font-family: 'Spoqa Han Sans Neo';
- width: 100%;
-
- display: block;
- white-space: nowrap;
-}
 
 
 </style>
 
-    
 
-    <!-- //<script type="text/babel" src='./js/script.js'></script> -->
 
-    <!-- <p id="demo"></p> -->
-
-    <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Feb 16, 2022 1:37:25").getTime();
-    
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-    
-      // Get today's date and time
-      var now = new Date().getTime();
-    
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-    
-      // Time calculations for days, hours, minutes and seconds
-      //var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      //var iconImg = document.getElementById("iconObj").src; ;
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-      // Display the result in the element with id="demo"
-      document.getElementById("demotext").innerHTML =   "<span ><img style='width:20px; height:20px; margin:0.8vw 0.3vw 0 1vw;' src ='./d-img.picnique.co.kr/event/220204_kt/obj.png'; ></span>"+" <span style='font-weight:100; color:#fff;'> 오늘 </span> " + hours + " : "
-      + minutes + " : " + seconds + " <span style='font-weight:100; color:#fff;'> 남음 </span>";
-    
-      // If the count down is finished, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demotext").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-    </script>
-
-        <script></script></section></section>
-
-        
- 
- 
             <script type="text/javascript">
                 $(window).on("pageshow", function () {
                     $("#footer-anker-relation").show();
@@ -1910,16 +1847,16 @@ progress(20, 20, $('.progressBar'));
                 assignCoupon($(this).data('coupon-id'));
             });
 
-            $('img[data-prod-id]').click(function(){
-                var prodId = $(this).data('prod-id');
-                location.href="/m/product/details/kt?cid=KDEAL&proCode=" + btoa(prodId) + "&rid=" +  KDeal.get('rid');
-            });
+            // $('img[data-prod-id]').click(function(){
+            //     var prodId = $(this).data('prod-id');
+            //     location.href="/m/product/details/kt?cid=KDEAL&proCode=" + btoa(prodId) + "&rid=" +  KDeal.get('rid');
+            // });
 
-            $('.eventItem-product-link').click(function () {
-                var productId = $(this).data('productid');
-                location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(productId) + "&rid=" +  KDeal.get('rid');
-                return false;
-            });
+            // $('.eventItem-product-link').click(function () {
+            //     var productId = $(this).data('productid');
+            //     location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(productId) + "&rid=" +  KDeal.get('rid');
+            //     return false;
+            // });
 
             $('.eventItem-link').click(function () {
                 var ref = "KT";
@@ -2081,11 +2018,11 @@ progress(20, 20, $('.progressBar'));
                     data.item.html(data.itemChild);
                 });
 
-                $('.eventItem-product-link').click(function () {
-                    var productId = $(this).data('productid');
-                    location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(productId) + "&rid=" +  KDeal.get('rid');
-                    return false;
-                });
+                // $('.eventItem-product-link').click(function () {
+                //     var productId = $(this).data('productid');
+                //     location.href = "/m/product/details/kt?cid=KDEAL&proCode=" + btoa(productId) + "&rid=" +  KDeal.get('rid');
+                //     return false;
+                // });
                 
                 return false;
             });

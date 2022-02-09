@@ -3509,8 +3509,8 @@ ul.buy_option_choice_list {
   }
 
 }
+/* 
 
-/*
 .event_modal_wrapper .event_modal{
   width: 100%;
   background: white;
@@ -3537,20 +3537,20 @@ ul.buy_option_choice_list {
   left: 50%;
   transform: translate(-50%,0);
   position: absolute;
+} */
+
+ 
+/* 
+.event_modal_wrapper .event_modal .small_title{
+  margin-bottom: 2vw;
+  font-weight: 500;
+  font-size: 4vw;
 }
 
- */
-
-/*.event_modal_wrapper .event_modal .small_title{*/
-/*  margin-bottom: 2vw;*/
-/*  font-weight: 500;*/
-/*  font-size: 4vw;*/
-/*}*/
-
-/*.event_modal_wrapper .event_modal .big_title{*/
-/*  font-weight: bold;*/
-/*  font-size: 5vw;*/
-/*}*/
+.event_modal_wrapper .event_modal .big_title{
+  font-weight: bold;
+  font-size: 5vw;
+} */
 
 /*.event_modal_wrapper .event_modal .desc {*/
 /*  font-weight: 300;*/
